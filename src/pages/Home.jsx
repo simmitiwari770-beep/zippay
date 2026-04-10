@@ -107,7 +107,7 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <section id="hero" className="hero-mesh min-h-screen flex items-center relative pt-48 pb-16">
+      <section id="hero" className="hero-mesh min-h-screen flex items-center relative pt-32 pb-16">
         <div className="hero-glow" />
         <div className="hero-glow-alt" />
         <div className="grid-overlay" />
@@ -323,7 +323,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* CTA Final */}
-      <section id="final" className="py-24 relative overflow-hidden">
+      <section id="final" className="py-16 relative overflow-hidden">
         <div className="hero-glow opacity-20" />
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <SectionHeader

@@ -23,7 +23,7 @@ export default function Footer() {
       {/* Subtle glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 py-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
           {/* Brand */}
           <div className="lg:col-span-4">

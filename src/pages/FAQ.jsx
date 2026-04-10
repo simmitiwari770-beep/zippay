@@ -75,7 +75,7 @@ export default function FAQ() {
   return (
     <main>
       {/* Hero */}
-      <section className="hero-mesh pt-48 pb-24 relative">
+      <section className="hero-mesh pt-32 pb-16 relative">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
         <div className="absolute inset-0 grid-overlay" />
         <div ref={heroRef} className="fade-up max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10 text-center">
@@ -146,7 +146,7 @@ export default function FAQ() {
       </SectionWrapper>
 
       {/* Still Need Help */}
-      <section className="relative overflow-hidden py-32 bg-bg-alt/30">
+      <section className="relative overflow-hidden py-20 bg-bg-alt/30">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-primary-600/10 rounded-full blur-[100px]" />
         <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-black text-text-primary mb-6">

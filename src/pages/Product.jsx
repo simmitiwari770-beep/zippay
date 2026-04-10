@@ -51,7 +51,7 @@ export default function Product() {
   return (
     <main>
       {/* Hero */}
-      <section className="hero-mesh pt-48 pb-20 relative">
+      <section className="hero-mesh pt-32 pb-12 relative">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div ref={heroRef} className="fade-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -200,33 +200,36 @@ export default function Product() {
             title={<>Zippay vs <span className="gradient-text">Traditional Lending</span></>}
             subtitle="See why thousands are switching to digital-first credit."
           />
-          <div className="gradient-border rounded-3xl overflow-hidden max-w-4xl mx-auto">
-            <div className="bg-bg-card rounded-3xl relative z-10 overflow-x-auto">
-              <table className="w-full table-dark">
+          <div className="rounded-3xl border border-white/10 overflow-hidden max-w-4xl mx-auto shadow-2xl shadow-primary-500/5 bg-bg-card relative">
+            {/* Highlighted column background for Zippay */}
+            <div className="absolute top-0 bottom-0 left-1/3 w-1/3 bg-primary-500/[0.03] border-x border-primary-500/10 pointer-events-none" />
+            
+            <div className="relative z-10 overflow-x-auto">
+              <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-white/[0.06]">
-                    <th>Feature</th>
-                    <th className="text-center">
-                      <span className="flex items-center justify-center gap-2 text-primary-400">
-                        <Zap className="w-3.5 h-3.5" /> Zippay
+                  <tr className="border-b border-white/10 bg-white/[0.02]">
+                    <th className="py-5 px-8 text-sm font-bold tracking-wider text-text-muted uppercase w-1/3">Feature</th>
+                    <th className="py-5 px-8 text-center w-1/3">
+                      <span className="flex items-center justify-center gap-2 text-primary-400 font-bold text-base">
+                        <Zap className="w-5 h-5" /> Zippay
                       </span>
                     </th>
-                    <th className="text-center">Traditional</th>
+                    <th className="py-5 px-8 text-center text-sm font-bold tracking-wider text-text-muted uppercase w-1/3">Traditional</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="divide-y divide-white/5">
                   {comparisonData.map((row, i) => (
-                    <tr key={i}>
-                      <td className="font-medium text-text-primary">{row.feature}</td>
-                      <td className="text-center">
-                        <span className="inline-flex items-center gap-1.5 text-accent font-semibold text-sm">
-                          <CheckCircle className="w-3.5 h-3.5" />
+                    <tr key={i} className="hover:bg-white/[0.02] transition-colors duration-300">
+                      <td className="py-6 px-8 font-semibold text-text-primary text-[15px]">{row.feature}</td>
+                      <td className="py-6 px-8 text-center">
+                        <span className="inline-flex items-center justify-center gap-2 text-primary-400 font-bold text-[15px] w-full drop-shadow-[0_0_8px_rgba(16,185,129,0.2)]">
+                          <CheckCircle className="w-4.5 h-4.5" />
                           {row.zippay}
                         </span>
                       </td>
-                      <td className="text-center">
-                        <span className="inline-flex items-center gap-1.5 text-text-muted text-sm">
-                          <AlertCircle className="w-3.5 h-3.5" />
+                      <td className="py-6 px-8 text-center">
+                        <span className="inline-flex items-center justify-center gap-2 text-text-muted font-medium text-[15px] w-full">
+                          <AlertCircle className="w-4.5 h-4.5" />
                           {row.traditional}
                         </span>
                       </td>

@@ -57,7 +57,7 @@ export default function HowItWorks() {
   return (
     <main>
       {/* Hero */}
-      <section className="hero-mesh pt-48 pb-20 relative">
+      <section className="hero-mesh pt-32 pb-12 relative">
         <div className="absolute bottom-0 right-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div ref={heroRef} className="fade-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -147,7 +147,7 @@ export default function HowItWorks() {
       </SectionWrapper>
 
       {/* CTA */}
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-16">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary-600/15 rounded-full blur-[120px]" />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div ref={ctaRef} className="fade-up max-w-3xl mx-auto px-4 text-center relative z-10">

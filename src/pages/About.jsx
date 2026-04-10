@@ -27,7 +27,7 @@ export default function About() {
   return (
     <main>
       {/* Hero */}
-      <section className="hero-mesh pt-48 pb-20 relative">
+      <section className="hero-mesh pt-32 pb-12 relative">
         <div className="absolute top-20 right-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div ref={heroRef} className="fade-up max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10 text-center">
