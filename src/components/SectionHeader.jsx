@@ -1,6 +1,11 @@
-export default function SectionHeader({ badge, title, subtitle, center = true, light = false }) {
+export default function SectionHeader({
+  badge,
+  title,
+  subtitle,
+  center = true,
+}) {
   return (
-    <div className={`mb-12 ${center ? 'text-center' : ''}`}>
+    <div className={`mb-12 ${center ? "text-center" : ""}`}>
       {badge && (
         <span className="badge mb-4 inline-flex">
           <span className="glow-dot !w-1.5 !h-1.5" />
@@ -11,7 +16,9 @@ export default function SectionHeader({ badge, title, subtitle, center = true, l
         {title}
       </h2>
       {subtitle && (
-        <p className={`mt-5 text-lg max-w-2xl leading-relaxed text-text-secondary ${center ? 'mx-auto' : ''}`}>
+        <p
+          className={`mt-5 text-lg max-w-2xl leading-relaxed text-text-secondary ${center ? "mx-auto" : ""}`}
+        >
           {subtitle}
         </p>
       )}

@@ -1,11 +1,14 @@
-import LegalPage from '../components/LegalPage';
+import LegalPage from "../components/LegalPage";
 
 export default function Privacy() {
   return (
     <LegalPage title="Privacy Policy" badge="Legal" lastUpdated="April 1, 2026">
       <h2>1. Introduction</h2>
       <p>
-        Zippay ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you use our platform, website, and mobile application (collectively, "Services").
+        Zippay ("we," "our," or "us") is committed to protecting your privacy.
+        This Privacy Policy explains how we collect, use, disclose, and
+        safeguard your personal information when you use our platform, website,
+        and mobile application (collectively, "Services").
       </p>
 
       <h2>2. Information We Collect</h2>
@@ -17,7 +20,9 @@ export default function Privacy() {
         <li>PAN card number and Aadhaar number (for KYC verification)</li>
         <li>Employment details and income information</li>
         <li>Bank account details</li>
-        <li>Credit score and credit history (from authorized credit bureaus)</li>
+        <li>
+          Credit score and credit history (from authorized credit bureaus)
+        </li>
       </ul>
 
       <h3>2.2 Technical Information</h3>
@@ -47,12 +52,18 @@ export default function Privacy() {
         <li>Our NBFC/banking partners for loan processing</li>
         <li>Authorized credit bureaus for credit assessment</li>
         <li>Government authorities as required by law</li>
-        <li>Service providers who assist in our operations (under strict confidentiality)</li>
+        <li>
+          Service providers who assist in our operations (under strict
+          confidentiality)
+        </li>
       </ul>
 
       <h2>5. Data Security</h2>
       <p>
-        We implement industry-standard security measures including 256-bit encryption, SOC2 certified infrastructure, and regular security audits to protect your information from unauthorized access, alteration, or disclosure.
+        We implement industry-standard security measures including 256-bit
+        encryption, SOC2 certified infrastructure, and regular security audits
+        to protect your information from unauthorized access, alteration, or
+        disclosure.
       </p>
 
       <h2>6. Your Rights</h2>
@@ -67,7 +78,8 @@ export default function Privacy() {
 
       <h2>7. Contact Us</h2>
       <p>
-        For privacy-related queries, contact our Data Protection Officer at <a href="mailto:privacy@zippay.in">privacy@zippay.in</a>
+        For privacy-related queries, contact our Data Protection Officer at{" "}
+        <a href="mailto:privacy@zippay.in">privacy@zippay.in</a>
       </p>
     </LegalPage>
   );

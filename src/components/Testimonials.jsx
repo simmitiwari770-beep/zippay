@@ -1,32 +1,32 @@
-import { useState, useEffect } from 'react';
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: 'Arjun Mehta',
-    role: 'Software Engineer',
-    avatar: 'AM',
+    name: "Arjun Mehta",
+    role: "Software Engineer",
+    avatar: "AM",
     rating: 5,
     text: "Got ₹50,000 credited in under 10 minutes. Zippay's process is genuinely instant — no paperwork, no branch visits. This is how lending should work.",
   },
   {
-    name: 'Priya Sharma',
-    role: 'Freelance Designer',
-    avatar: 'PS',
+    name: "Priya Sharma",
+    role: "Freelance Designer",
+    avatar: "PS",
     rating: 5,
     text: "As a freelancer, I needed quick funds between projects. Zippay made it effortless. The transparency in repayment terms is what truly sets them apart.",
   },
   {
-    name: 'Rahul Singh',
-    role: 'MBA Student',
-    avatar: 'RS',
+    name: "Rahul Singh",
+    role: "MBA Student",
+    avatar: "RS",
     rating: 4,
     text: "Clean app, minimal documentation, and genuinely fast disbursal. I was skeptical at first, but Zippay delivered exactly as promised. Highly recommend!",
   },
   {
-    name: 'Neha Gupta',
-    role: 'Marketing Manager',
-    avatar: 'NG',
+    name: "Neha Gupta",
+    role: "Marketing Manager",
+    avatar: "NG",
     rating: 5,
     text: "The entire experience feels premium. From eligibility check to disbursal — everything is seamless. Zippay has set a new benchmark for digital lending.",
   },
@@ -36,7 +36,8 @@ export default function Testimonials() {
   const [active, setActive] = useState(0);
 
   const next = () => setActive((prev) => (prev + 1) % testimonials.length);
-  const prev = () => setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  const prev = () =>
+    setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   useEffect(() => {
     const timer = setInterval(next, 5000);
@@ -58,7 +59,7 @@ export default function Testimonials() {
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-4 h-4 ${i < t.rating ? 'text-amber-400 fill-amber-400' : 'text-white/10'}`}
+                className={`w-4 h-4 ${i < t.rating ? "text-amber-400 fill-amber-400" : "text-white/10"}`}
               />
             ))}
           </div>
@@ -75,7 +76,9 @@ export default function Testimonials() {
                 {t.avatar}
               </div>
               <div>
-                <p className="font-semibold text-text-primary text-sm">{t.name}</p>
+                <p className="font-semibold text-text-primary text-sm">
+                  {t.name}
+                </p>
                 <p className="text-xs text-text-muted">{t.role}</p>
               </div>
             </div>
@@ -105,7 +108,7 @@ export default function Testimonials() {
             key={i}
             onClick={() => setActive(i)}
             className={`h-1.5 rounded-full transition-all duration-300 ${
-              i === active ? 'w-8 bg-primary-500' : 'w-1.5 bg-white/10'
+              i === active ? "w-8 bg-primary-500" : "w-1.5 bg-white/10"
             }`}
           />
         ))}

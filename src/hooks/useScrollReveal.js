@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
-export function useScrollReveal(options = {}) {
+export function useScrollReveal({ threshold = 0.05, rootMargin = "0px" } = {}) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -10,21 +10,24 @@ export function useScrollReveal(options = {}) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add('visible');
+          el.classList.add("visible");
           observer.unobserve(el);
         }
       },
-      { threshold: options.threshold || 0.05, rootMargin: options.rootMargin || '0px' }
+      {
+        threshold,
+        rootMargin,
+      },
     );
 
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold, rootMargin]);
 
   return ref;
 }
 
-export function useScrollRevealMultiple(count, options = {}) {
+export function useScrollRevealMultiple(count, { threshold = 0.05 } = {}) {
   const refs = useRef([]);
 
   useEffect(() => {
@@ -32,12 +35,12 @@ export function useScrollRevealMultiple(count, options = {}) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: options.threshold || 0.05 }
+      { threshold },
     );
 
     refs.current.forEach((el) => {
@@ -45,7 +48,7 @@ export function useScrollRevealMultiple(count, options = {}) {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
 
   return (index) => (el) => {
     refs.current[index] = el;

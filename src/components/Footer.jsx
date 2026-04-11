@@ -1,20 +1,20 @@
-import { Link } from 'react-router-dom';
-import { Zap, ArrowUpRight, Mail, Globe } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { Zap, ArrowUpRight, Mail, Globe } from "lucide-react";
 
 const quickLinks = [
-  { name: 'About', path: '/about' },
-  { name: 'Product', path: '/product' },
-  { name: 'How It Works', path: '/how-it-works' },
-  { name: 'FAQ', path: '/faq' },
-  { name: 'Contact', path: '/contact' },
+  { name: "About", path: "/about" },
+  { name: "Product", path: "/product" },
+  { name: "How It Works", path: "/how-it-works" },
+  { name: "FAQ", path: "/faq" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const legalLinks = [
-  { name: 'Privacy Policy', path: '/privacy' },
-  { name: 'Terms & Conditions', path: '/terms' },
-  { name: 'Disclaimer', path: '/disclaimer' },
-  { name: 'Grievance Redressal', path: '/grievance' },
-  { name: 'Responsible Lending', path: '/responsible-lending' },
+  { name: "Privacy Policy", path: "/privacy" },
+  { name: "Terms & Conditions", path: "/terms" },
+  { name: "Disclaimer", path: "/disclaimer" },
+  { name: "Grievance Redressal", path: "/grievance" },
+  { name: "Responsible Lending", path: "/responsible-lending" },
 ];
 
 export default function Footer() {
@@ -37,13 +37,24 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-text-muted leading-relaxed mb-6 max-w-xs">
-              Instant Digital Credit. Zero Hassle. Experience the future of personal lending — fast, transparent, and built for you.
+              Instant Digital Credit. Zero Hassle. Experience the future of
+              personal lending — fast, transparent, and built for you.
             </p>
             <div className="flex gap-2">
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-xl border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-white hover:border-white/[0.12] hover:bg-white/[0.04] transition-all">
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-xl border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-white hover:border-white/[0.12] hover:bg-white/[0.04] transition-all"
+              >
                 <Mail className="w-4 h-4" />
               </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-xl border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-white hover:border-white/[0.12] hover:bg-white/[0.04] transition-all">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-xl border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-white hover:border-white/[0.12] hover:bg-white/[0.04] transition-all"
+              >
                 <Globe className="w-4 h-4" />
               </a>
             </div>
@@ -51,7 +62,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2 lg:col-start-6">
-            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">Product</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">
+              Product
+            </h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -69,7 +82,9 @@ export default function Footer() {
 
           {/* Legal */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">Legal</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">
+              Legal
+            </h4>
             <ul className="space-y-3">
               {legalLinks.map((link) => (
                 <li key={link.path}>
@@ -87,17 +102,29 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">Get in Touch</h4>
+            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">
+              Get in Touch
+            </h4>
             <div className="space-y-4">
               <div>
-                <p className="text-xs text-text-muted mb-1 uppercase tracking-wider">Email</p>
-                <a href="mailto:support@zippay.in" className="text-sm text-text-primary hover:text-primary-400 transition-colors font-medium">
+                <p className="text-xs text-text-muted mb-1 uppercase tracking-wider">
+                  Email
+                </p>
+                <a
+                  href="mailto:support@zippay.in"
+                  className="text-sm text-text-primary hover:text-primary-400 transition-colors font-medium"
+                >
                   support@zippay.in
                 </a>
               </div>
               <div>
-                <p className="text-xs text-text-muted mb-1 uppercase tracking-wider">Help Center</p>
-                <Link to="/faq" className="text-sm text-text-primary hover:text-primary-400 transition-colors font-medium">
+                <p className="text-xs text-text-muted mb-1 uppercase tracking-wider">
+                  Help Center
+                </p>
+                <Link
+                  to="/faq"
+                  className="text-sm text-text-primary hover:text-primary-400 transition-colors font-medium"
+                >
                   Visit FAQ
                 </Link>
               </div>
