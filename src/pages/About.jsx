@@ -84,14 +84,13 @@ export default function About() {
               <Sparkles className="w-3.5 h-3.5" />
               Our Story
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
-              Redefining Credit for{" "}
-              <span className="gradient-text">Digital India</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+              About <span className="text-primary-600">Zippay</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              We started with a simple belief: everyone deserves access to fast,
-              fair, and transparent credit. Zippay is building the future of
-              personal lending — one instant disbursal at a time.
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
+              Zippay is a modern digital lending platform focused on making short-term credit accessible, fast, and transparent. 
+              Built with a user-first approach, Zippay removes the complexity traditionally associated with loans and replaces it 
+              with speed, simplicity, and trust.
             </p>
           </div>
         </div>
@@ -105,30 +104,30 @@ export default function About() {
               {
                 icon: Target,
                 title: "Our Vision",
-                desc: "To become India's most trusted and accessible instant credit platform — enabling financial freedom for millions.",
+                desc: "To redefine digital lending by making credit easily accessible, responsibly offered, and transparently managed for every eligible user.",
                 accent: "from-violet-500 to-purple-600",
               },
               {
                 icon: Eye,
                 title: "Our Mission",
-                desc: "To eliminate the friction in personal lending through technology, transparency, and an unwavering focus on the user experience.",
+                desc: "Simplify access to digital credit, deliver a frictionless experience, promote responsible borrowing, and build long-term trust.",
                 accent: "from-blue-500 to-cyan-500",
               },
               {
                 icon: Heart,
                 title: "Our Philosophy",
-                desc: "Credit should empower, not burden. We design every product with responsible lending at its core — fair rates, clear terms, flexible repayment.",
+                desc: "At Zippay, we believe credit should empower, not overwhelm. Every feature is designed to be simple, clear, and user-friendly.",
                 accent: "from-emerald-500 to-teal-500",
               },
             ].map((item, i) => (
-              <div key={i} className="gradient-border rounded-3xl card-lift">
-                <div className="bg-bg-card rounded-3xl p-8 text-center h-full relative z-10">
+              <div key={i} className="glass-card card-lift !p-8 text-center h-full">
+                <div className="relative z-10">
                   <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.accent} flex items-center justify-center mx-auto mb-5 shadow-lg`}
+                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.accent} flex items-center justify-center mx-auto mb-5 shadow-lg shadow-black/5`}
                   >
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-text-primary mb-3">
+                  <h3 className="text-lg font-bold text-slate-900 mb-3">
                     {item.title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -155,13 +154,13 @@ export default function About() {
           />
           <div className="grid sm:grid-cols-2 gap-4">
             {values.map((v, i) => (
-              <div key={i} className="gradient-border rounded-3xl card-lift">
-                <div className="bg-bg-card rounded-3xl p-7 flex gap-5 items-start relative z-10">
-                  <div className="w-11 h-11 rounded-xl bg-primary-600/15 border border-primary-500/20 flex items-center justify-center shrink-0">
-                    <v.icon className="w-5 h-5 text-primary-400" />
+              <div key={i} className="glass-card card-lift !p-7 flex gap-5 items-start">
+                <div className="relative z-10 flex gap-5 items-start">
+                  <div className="w-11 h-11 rounded-xl bg-primary-600/5 border border-primary-500/10 flex items-center justify-center shrink-0">
+                    <v.icon className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-text-primary mb-2">
+                    <h3 className="text-base font-bold text-slate-900 mb-2">
                       {v.title}
                     </h3>
                     <p className="text-sm text-text-secondary leading-relaxed">
@@ -209,7 +208,7 @@ export default function About() {
                   <span className="badge !text-[10px] mb-2 inline-flex">
                     {m.year}
                   </span>
-                  <h3 className="text-base font-bold text-text-primary mb-1">
+                  <h3 className="text-base font-bold text-slate-900 mb-1">
                     {m.title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -223,7 +222,7 @@ export default function About() {
       </SectionWrapper>
 
       {/* Stats Banner */}
-      <div className="border-y border-white/[0.04]">
+      <div className="border-y border-black/[0.04]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[

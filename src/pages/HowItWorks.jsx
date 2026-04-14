@@ -10,6 +10,7 @@ import {
   Wallet,
   Shield,
   Sparkles,
+  Zap,
 } from "lucide-react";
 import SectionWrapper from "../components/SectionWrapper";
 import SectionHeader from "../components/SectionHeader";
@@ -19,50 +20,42 @@ const mainSteps = [
   {
     step: "01",
     icon: UserPlus,
-    title: "Create Your Account",
-    desc: "Download the app or visit our website. Sign up with your mobile number and email. It takes less than 60 seconds.",
-    details: [
-      "Enter basic details",
-      "Verify mobile via OTP",
-      "Set up your profile",
-    ],
-    accent: "from-blue-500 to-cyan-500",
+    title: "Sign Up",
+    desc: "Create your account using basic details in just a few seconds via our secure OTP gateway.",
+    details: ["Mobile authentication", "Basic profile", "Instant setup"],
+    accent: "from-blue-600 to-indigo-700",
   },
   {
     step: "02",
     icon: BadgeCheck,
-    title: "Complete KYC Verification",
-    desc: "Our fully digital KYC is quick and hassle-free. Just share your PAN, Aadhaar, and a selfie — no physical documents needed.",
-    details: [
-      "PAN card verification",
-      "Aadhaar e-verification",
-      "Selfie-based identity check",
-    ],
-    accent: "from-violet-500 to-purple-600",
+    title: "Eligibility Check",
+    desc: "Get instant eligibility results with minimal inputs through our real-time AI credit engine.",
+    details: ["Real-time results", "No impact check", "Paperless inquiry"],
+    accent: "from-purple-600 to-violet-800",
   },
   {
     step: "03",
-    icon: CircleDollarSign,
-    title: "Get Your Credit Limit",
-    desc: "Our AI-powered engine evaluates your profile in real-time and delivers a personalized credit offer within minutes.",
-    details: [
-      "AI credit scoring",
-      "Personalized limit up to ₹5L",
-      "Transparent interest rate offer",
-    ],
-    accent: "from-primary-500 to-primary-700",
+    icon: UserPlus,
+    title: "Verification",
+    desc: "Complete your quick digital verification process securely on our encrypted platform.",
+    details: ["Digital KYC", "Identity verification", "Secure processing"],
+    accent: "from-primary-600 to-primary-900",
   },
   {
     step: "04",
     icon: CreditCard,
-    title: "Receive Funds Instantly",
-    desc: "Accept your credit offer and the funds are transferred directly to your bank account — instantly.",
-    details: [
-      "Choose your loan amount",
-      "Select repayment tenure",
-      "Instant bank transfer",
-    ],
-    accent: "from-emerald-500 to-teal-500",
+    title: "Credit Access",
+    desc: "Receive approved credit directly into your bank account almost immediately after approval.",
+    details: ["Instant disbursal", "Direct transfer", "Funds available"],
+    accent: "from-emerald-600 to-teal-800",
+  },
+  {
+    step: "05",
+    icon: Wallet,
+    title: "Repayment",
+    desc: "Repay digitally through simple, secure methods that fit your monthly budget perfectly.",
+    details: ["Digital repayment", "Flexible options", "Track in app"],
+    accent: "from-amber-600 to-orange-800",
   },
 ];
 
@@ -70,17 +63,17 @@ const afterSteps = [
   {
     icon: Bell,
     title: "Smart Reminders",
-    desc: "Get timely notifications before EMI due dates. Never miss a payment.",
+    desc: "Never pay a late fee. Get proactive notifications before your repayment cycle begins.",
   },
   {
     icon: Wallet,
-    title: "Easy Repayment",
-    desc: "Multiple repayment options — UPI, auto-debit, net banking, or in-app payment.",
+    title: "Seamless Repayment",
+    desc: "Authorize auto-debit or pay manually via any UPI app, Net Banking, or Credit Card.",
   },
   {
     icon: Shield,
-    title: "Secure Always",
-    desc: "Bank-grade encryption protects every transaction. Your data is always safe.",
+    title: "Ironclad Security",
+    desc: "Every transaction is protected by bank-grade AES-256 encryption protocols.",
   },
 ];
 
@@ -91,89 +84,90 @@ export default function HowItWorks() {
   const ctaRef = useScrollReveal();
 
   return (
-    <main>
-      {/* Hero */}
-      <section className="hero-mesh pt-32 pb-12 relative">
-        <div className="absolute bottom-0 right-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
-        <div className="absolute inset-0 grid-pattern opacity-30" />
+    <main className="overflow-hidden">
+      {/* Hero — Flagship Redesign */}
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <div className="hero-glow" />
+        <div className="grid-overlay opacity-20" />
+        
         <div
           ref={heroRef}
-          className="fade-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+          className="fade-up container-custom relative z-10"
         >
-          <div className="max-w-3xl mx-auto text-center">
-            <span className="badge mb-6 inline-flex">
-              <Sparkles className="w-3.5 h-3.5" />
-              How It Works
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="badge mx-auto mb-8">
+              <Sparkles className="w-4 h-4" />
+              The Zippay Methodology
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
-              From Sign-Up to{" "}
-              <span className="gradient-text">Funds in Minutes</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tighter mb-10 text-primary-900">
+              Simple. Fast. <br />
+              <span className="gradient-text">Digital.</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              Our streamlined process is designed to get you credit faster than
-              ever. Four simple steps — that's all it takes.
+            <p className="text-xl md:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium opacity-80">
+              We've engineered a frictionless journey that turns a few clicks 
+              into instant buying power. Here's exactly how it works.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Timeline Steps */}
+      {/* Timeline Steps — Redesigned Component */}
       <SectionWrapper>
         <div ref={stepsRef} className="fade-up">
-          <div className="max-w-4xl mx-auto relative">
-            {/* Vertical line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary-500/30 via-primary-500/10 to-transparent md:-translate-x-px" />
+          <div className="max-w-5xl mx-auto relative pt-12">
+            {/* Architectural Line */}
+            <div className="absolute left-10 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary-200 via-primary-500/20 to-transparent md:-translate-x-px" />
 
             {mainSteps.map((s, i) => (
               <div
                 key={i}
-                className={`relative flex items-start gap-6 mb-16 last:mb-0 ${
+                className={`relative flex items-start gap-12 mb-24 last:mb-0 ${
                   i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                {/* Center icon */}
-                <div className="absolute left-8 md:left-1/2 -translate-x-1/2 z-10">
+                {/* Visual Anchor */}
+                <div className="absolute left-10 md:left-1/2 -translate-x-1/2 z-10">
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${s.accent} flex items-center justify-center shadow-xl shadow-primary-500/10`}
+                    className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${s.accent} flex items-center justify-center shadow-2xl shadow-primary-900/10 border-4 border-white group hover:scale-110 transition-transform duration-700`}
                   >
-                    <s.icon className="w-7 h-7 text-white" />
+                    <s.icon className="w-10 h-10 text-white" />
                   </div>
                 </div>
 
-                {/* Content Card */}
+                {/* Step Card — Glass Redesign */}
                 <div
-                  className={`ml-28 md:ml-0 md:w-[calc(50%-3rem)] ${
+                  className={`ml-28 md:ml-0 md:w-[calc(50%-4rem)] ${
                     i % 2 === 0
                       ? "md:pr-0 md:text-right md:mr-auto"
                       : "md:pl-0 md:ml-auto"
                   }`}
                 >
-                  <div className="gradient-border rounded-3xl card-lift">
-                    <div className="bg-bg-card rounded-3xl p-7 relative z-10">
-                      <span className="badge !text-[10px] mb-3 inline-flex">
-                        Step {s.step}
-                      </span>
-                      <h3 className="text-lg font-bold text-text-primary mb-2">
-                        {s.title}
-                      </h3>
-                      <p className="text-sm text-text-secondary leading-relaxed mb-4">
-                        {s.desc}
-                      </p>
-                      <div
-                        className={`space-y-2 ${i % 2 === 0 ? "md:flex md:flex-col md:items-end" : ""}`}
-                      >
-                        {s.details.map((d, j) => (
-                          <div
-                            key={j}
-                            className={`flex items-center gap-2 ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}
-                          >
-                            <CheckCircle className="w-3.5 h-3.5 text-accent shrink-0" />
-                            <span className="text-xs text-text-muted font-medium">
-                              {d}
-                            </span>
+                  <div className="glass-card hover:bg-white !p-10 !rounded-[40px] transition-all duration-700">
+                    <span className="text-6xl font-black text-primary-200/40 block mb-6">
+                      {s.step}
+                    </span>
+                    <h3 className="text-3xl font-black text-primary-900 mb-6 font-primary">
+                      {s.title}
+                    </h3>
+                    <p className="text-lg text-text-secondary leading-relaxed mb-8">
+                      {s.desc}
+                    </p>
+                    <div
+                      className={`flex flex-col gap-4 ${i % 2 === 0 ? "md:items-end" : ""}`}
+                    >
+                      {s.details.map((d, j) => (
+                        <div
+                          key={j}
+                          className={`flex items-center gap-3 ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}
+                        >
+                          <div className="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
+                            <CheckCircle className="w-4 h-4 text-primary-600" />
                           </div>
-                        ))}
-                      </div>
+                          <span className="text-sm text-primary-900 font-bold tracking-tight">
+                            {d}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -183,59 +177,66 @@ export default function HowItWorks() {
         </div>
       </SectionWrapper>
 
-      {/* After Approval */}
+      {/* Post-Approval — Premium Banner Grid */}
       <SectionWrapper gradient>
         <div ref={afterRef} className="fade-up">
           <SectionHeader
-            badge="After Approval"
+            badge="Final Phase"
             title={
               <>
-                We've got you <span className="gradient-text">covered</span>
+                Reliability Beyond <span className="gradient-text">Disbursal</span>
               </>
             }
-            subtitle="Our support doesn't end at disbursal. We're with you through every step of repayment."
+            subtitle="Our commitment to your financial health extends far beyond the moment funds reach your account."
           />
-          <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {afterSteps.map((s, i) => (
-              <div key={i} className="gradient-border rounded-3xl card-lift">
-                <div className="bg-bg-card rounded-3xl p-7 text-center relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-primary-600/15 border border-primary-500/20 flex items-center justify-center mx-auto mb-5">
-                    <s.icon className="w-6 h-6 text-primary-400" />
-                  </div>
-                  <h3 className="text-base font-bold text-text-primary mb-2">
-                    {s.title}
-                  </h3>
-                  <p className="text-sm text-text-secondary leading-relaxed">
-                    {s.desc}
-                  </p>
+              <div key={i} className="glass-card !p-12 text-center group hover:scale-[1.05] transition-all duration-700">
+                <div className="w-20 h-20 rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center mx-auto mb-10 group-hover:bg-primary-600 transition-all duration-700">
+                  <s.icon className="w-10 h-10 text-primary-600 group-hover:text-white transition-all duration-700" />
                 </div>
+                <h3 className="text-2xl font-black text-primary-900 mb-4">
+                  {s.title}
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                  {s.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </SectionWrapper>
 
-      {/* CTA */}
-      <section className="relative overflow-hidden py-16">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-primary-600/15 rounded-full blur-[120px]" />
-        <div className="absolute inset-0 grid-pattern opacity-30" />
+      {/* Final CTA — Cinematic Banner */}
+      <SectionWrapper>
         <div
           ref={ctaRef}
-          className="fade-up max-w-3xl mx-auto px-4 text-center relative z-10"
+          className="fade-up relative overflow-hidden rounded-[60px] bg-gradient-to-br from-primary-600 to-primary-900 p-16 md:p-32 text-center text-white"
         >
-          <h2 className="text-3xl md:text-4xl font-black text-text-primary mb-4">
-            Ready to Experience{" "}
-            <span className="gradient-text">Instant Credit?</span>
-          </h2>
-          <p className="text-lg text-text-secondary mb-8">
-            It takes less than 10 minutes. Start your journey now.
-          </p>
-          <Link to="/contact" className="btn-primary !px-10 !py-4 !text-base">
-            Get Started
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="absolute inset-0 grid-overlay !opacity-10" />
+          <div className="hero-glow !bg-white/5" />
+          
+          <div className="max-w-4xl mx-auto relative z-10">
+            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-[1.1] tracking-tighter">
+              Start Your Journey <br />
+              <span className="text-primary-300">In Under 10 Minutes.</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-white/80 mb-16 max-w-2xl mx-auto font-medium">
+              Don't wait for banks. Join Zippay and experience the 
+              power of truly instant digital credit today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link to="/contact" className="px-12 py-5 bg-white text-primary-700 rounded-3xl font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-2xl shadow-black/20">
+                Get Started Now
+                <Zap className="w-5 h-5" />
+              </Link>
+              <Link to="/about" className="px-12 py-5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl font-black text-xl hover:bg-white/20 transition-all">
+                Learn More
+              </Link>
+            </div>
+          </div>
         </div>
-      </section>
+      </SectionWrapper>
     </main>
   );
 }

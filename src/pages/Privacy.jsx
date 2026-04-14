@@ -12,36 +12,20 @@ export default function Privacy() {
       </p>
 
       <h2>2. Information We Collect</h2>
-      <h3>2.1 Personal Information</h3>
-      <p>We may collect the following personal information:</p>
+      <p>We collect only the information necessary to provide and secure our digital credit services:</p>
       <ul>
-        <li>Full name, date of birth, gender</li>
-        <li>Email address and phone number</li>
-        <li>PAN card number and Aadhaar number (for KYC verification)</li>
-        <li>Employment details and income information</li>
-        <li>Bank account details</li>
-        <li>
-          Credit score and credit history (from authorized credit bureaus)
-        </li>
+        <li><strong>Personal & contact details</strong>: Name, address, and mobile number.</li>
+        <li><strong>Device & usage data</strong>: Information about your device and how you interact with our platform.</li>
+        <li><strong>Onboarding information</strong>: Data submitted during your application and KYC verification.</li>
       </ul>
 
-      <h3>2.2 Technical Information</h3>
+      <h2>3. Use of Information</h2>
+      <p>Your information is used for specific, legitimate purposes:</p>
       <ul>
-        <li>Device information (model, OS version, unique identifiers)</li>
-        <li>IP address and browser type</li>
-        <li>Usage data and interaction patterns</li>
-        <li>Location data (with your consent)</li>
-      </ul>
-
-      <h2>3. How We Use Your Information</h2>
-      <p>We use your personal information for the following purposes:</p>
-      <ul>
-        <li>To process your loan application and assess eligibility</li>
-        <li>To verify your identity through KYC processes</li>
-        <li>To disburse and manage your loan</li>
-        <li>To communicate important updates about your account</li>
-        <li>To improve our products and services</li>
-        <li>To comply with legal and regulatory requirements</li>
+        <li><strong>Service delivery</strong>: To process and manage your credit applications.</li>
+        <li><strong>User communication</strong>: To keep you informed about your account and updates.</li>
+        <li><strong>Security & fraud prevention</strong>: To protect your data and prevent unauthorized activity.</li>
+        <li><strong>Legal and regulatory compliance</strong>: To meet required financial and security standards.</li>
       </ul>
 
       <h2>4. Data Sharing</h2>
@@ -66,7 +50,7 @@ export default function Privacy() {
         disclosure.
       </p>
 
-      <h2>6. Your Rights</h2>
+      <h2>7. Your Rights</h2>
       <p>You have the right to:</p>
       <ul>
         <li>Access your personal information held by us</li>
@@ -76,7 +60,7 @@ export default function Privacy() {
         <li>Lodge a complaint with the relevant data protection authority</li>
       </ul>
 
-      <h2>7. Contact Us</h2>
+      <h2>8. Contact Us</h2>
       <p>
         For privacy-related queries, contact our Data Protection Officer at{" "}
         <a href="mailto:privacy@zippay.in">privacy@zippay.in</a>

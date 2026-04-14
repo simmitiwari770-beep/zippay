@@ -7,8 +7,8 @@ export default function LegalPage({ title, badge, lastUpdated, children }) {
   return (
     <main>
       <section className="hero-mesh pt-32 pb-16 relative">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-primary-600/8 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 grid-pattern opacity-30" />
+        <div className="absolute top-20 right-10 w-96 h-96 bg-primary-600/5 rounded-full blur-[100px]" />
+        <div className="absolute inset-0 grid-overlay opacity-30" />
         <div
           ref={heroRef}
           className="fade-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
@@ -32,10 +32,8 @@ export default function LegalPage({ title, badge, lastUpdated, children }) {
 
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="gradient-border rounded-3xl">
-            <div className="bg-bg-card rounded-3xl p-8 md:p-12 relative z-10">
-              <div className="prose-dark">{children}</div>
-            </div>
+          <div className="glass-card !p-8 md:p-12 relative z-10">
+            <div className="prose-light">{children}</div>
           </div>
         </div>
       </section>

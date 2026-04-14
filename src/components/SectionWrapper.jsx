@@ -12,7 +12,7 @@ export default function SectionWrapper({
     <section
       id={id}
       ref={ref}
-      className={`fade-up py-16 md:py-16 relative overflow-hidden ${gradient ? "bg-bg-alt/50" : ""} ${className}`}
+      className={`fade-up py-8 md:py-8 relative overflow-hidden ${gradient ? "bg-bg-alt/50" : ""} ${className}`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">{children}</div>
     </section>

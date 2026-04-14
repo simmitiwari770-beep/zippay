@@ -1,79 +1,64 @@
 import { Link } from "react-router-dom";
-import { Zap, ArrowUpRight, Mail, Globe } from "lucide-react";
-
-const quickLinks = [
-  { name: "About", path: "/about" },
-  { name: "Product", path: "/product" },
-  { name: "How It Works", path: "/how-it-works" },
-  { name: "FAQ", path: "/faq" },
-  { name: "Contact", path: "/contact" },
-];
-
-const legalLinks = [
-  { name: "Privacy Policy", path: "/privacy" },
-  { name: "Terms & Conditions", path: "/terms" },
-  { name: "Disclaimer", path: "/disclaimer" },
-  { name: "Grievance Redressal", path: "/grievance" },
-  { name: "Responsible Lending", path: "/responsible-lending" },
-];
+import {
+  Zap,
+  Mail,
+  ChevronRight,
+  ShieldCheck,
+  Globe,
+  Briefcase
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.04]">
-      {/* Subtle glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px bg-gradient-to-r from-transparent via-primary-500/30 to-transparent" />
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-14">
-          {/* Brand */}
-          <div className="lg:col-span-4">
-            <Link to="/" className="flex items-center gap-2.5 mb-5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-                <Zap className="w-4.5 h-4.5 text-white" fill="white" />
+    <footer className="bg-slate-50 pt-24 pb-12 border-t border-slate-200 relative overflow-hidden">
+      <div className="container-custom relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          {/* Brand Col */}
+          <div className="space-y-8">
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center shadow-lg shadow-primary-600/20 group-hover:scale-110 transition-all duration-500">
+                <Zap className="w-5 h-5 text-white" fill="white" />
               </div>
-              <span className="text-lg font-bold tracking-tight">
-                <span className="text-white">ZIP</span>
-                <span className="text-primary-400">PAY</span>
+              <span className="text-xl font-bold tracking-tight">
+                <span className="text-primary-900">ZIP</span>
+                <span className="text-primary-600">PAY</span>
               </span>
             </Link>
-            <p className="text-sm text-text-muted leading-relaxed mb-6 max-w-xs">
-              Instant Digital Credit. Zero Hassle. Experience the future of
-              personal lending — fast, transparent, and built for you.
+            <p className="text-text-secondary leading-relaxed font-medium">
+              Zippay is a digital lending platform offering fast, simple, and transparent credit solutions for modern users.
             </p>
-            <div className="flex gap-2">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-white hover:border-white/[0.12] hover:bg-white/[0.04] transition-all"
-              >
-                <Mail className="w-4 h-4" />
-              </a>
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/[0.06] flex items-center justify-center text-text-muted hover:text-white hover:border-white/[0.12] hover:bg-white/[0.04] transition-all"
-              >
-                <Globe className="w-4 h-4" />
-              </a>
+            <div className="flex gap-4">
+              {[Globe, Briefcase].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-400 hover:text-primary-600 hover:border-primary-300 transition-all duration-300"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-2 lg:col-start-6">
-            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">
-              Product
-            </h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.path}>
+          <div>
+            <h4 className="text-primary-900 font-bold text-xs uppercase tracking-widest mb-8">Platform</h4>
+            <ul className="space-y-4">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About", path: "/about" },
+                { name: "Product", path: "/product" },
+                { name: "How It Works", path: "/how-it-works" },
+                { name: "FAQs", path: "/faq" },
+                { name: "Contact", path: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
                   <Link
-                    to={link.path}
-                    className="text-sm text-text-secondary hover:text-white flex items-center gap-1.5 group transition-colors"
+                    to={item.path}
+                    className="text-text-secondary hover:text-primary-600 font-semibold flex items-center gap-2 group transition-all"
                   >
-                    {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                    <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -81,74 +66,66 @@ export default function Footer() {
           </div>
 
           {/* Legal */}
-          <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">
-              Legal
-            </h4>
-            <ul className="space-y-3">
-              {legalLinks.map((link) => (
-                <li key={link.path}>
+          <div>
+            <h4 className="text-primary-900 font-bold text-xs uppercase tracking-widest mb-8">Legal</h4>
+            <ul className="space-y-4">
+              {[
+                { name: "Privacy Policy", path: "/privacy" },
+                { name: "Terms & Conditions", path: "/terms" },
+                { name: "Disclaimer", path: "/disclaimer" },
+                { name: "Grievance Redressal", path: "/grievance" },
+              ].map((item) => (
+                <li key={item.name}>
                   <Link
-                    to={link.path}
-                    className="text-sm text-text-secondary hover:text-white flex items-center gap-1.5 group transition-colors"
+                    to={item.path}
+                    className="text-text-secondary hover:text-primary-600 font-semibold flex items-center gap-2 group transition-all"
                   >
-                    {link.name}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />
+                    <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-primary-600 group-hover:translate-x-1 transition-all" />
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-[0.12em] text-text-muted mb-5">
-              Get in Touch
-            </h4>
-            <div className="space-y-4">
-              <div>
-                <p className="text-xs text-text-muted mb-1 uppercase tracking-wider">
-                  Email
-                </p>
-                <a
-                  href="mailto:support@zippay.in"
-                  className="text-sm text-text-primary hover:text-primary-400 transition-colors font-medium"
-                >
-                  support@zippay.in
-                </a>
+          {/* Contact Info */}
+          <div className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm">
+            <h4 className="text-primary-900 font-bold text-xs uppercase tracking-widest mb-6">Contact Us</h4>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-primary-600" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-primary-900 uppercase mb-1">Email Support</p>
+                  <p className="text-sm font-semibold text-text-secondary">support@zippay.in</p>
+                </div>
               </div>
-              <div>
-                <p className="text-xs text-text-muted mb-1 uppercase tracking-wider">
-                  Help Center
-                </p>
-                <Link
-                  to="/faq"
-                  className="text-sm text-text-primary hover:text-primary-400 transition-colors font-medium"
-                >
-                  Visit FAQ
-                </Link>
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-primary-50 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-5 h-5 text-primary-600" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-primary-900 uppercase mb-1">Regulated By</p>
+                  <p className="text-sm font-semibold text-text-secondary">RBI Registration #12345</p>
+                </div>
               </div>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border border-white/[0.08] text-text-secondary hover:text-white hover:border-white/[0.15] hover:bg-white/[0.04] transition-all mt-2"
-              >
-                Contact Support
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
             </div>
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="divider mb-6" />
-
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-text-muted">
-            © {new Date().getFullYear()} Zippay. All rights reserved.
+        {/* Bottom Section */}
+        <div className="pt-12 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-sm font-semibold text-slate-400">
+            Zippay is a product under <strong>Lendwise Advisory Private Limited.</strong>
           </p>
-          <p className="text-xs text-text-muted">
-            Zippay — Instant Digital Credit. Zero Hassle.
+          <p className="text-sm font-semibold text-slate-400 mt-2 md:mt-0">
+            &copy; {new Date().getFullYear()} All rights reserved.
           </p>
+          <div className="flex items-center gap-8 grayscale opacity-40">
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">RBI Regulated</span>
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">NPCI Registered</span>
+          </div>
         </div>
       </div>
     </footer>

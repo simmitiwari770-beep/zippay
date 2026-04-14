@@ -6,16 +6,20 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 const faqCategories = {
   General: [
     {
-      q: "What is Zippay?",
-      a: "Zippay is an instant digital credit platform that provides fast, paperless, short-term personal loans. Our fully online process — from eligibility check to disbursal — is designed to get you funds in minutes, not days.",
+      q: "Is Zippay fully digital?",
+      a: "Yes, the entire process from application to repayment is digital.",
     },
     {
-      q: "Is Zippay a bank or an NBFC?",
-      a: "Zippay operates as a digital lending platform in partnership with RBI-registered NBFCs and banks. We act as a technology platform that connects borrowers with our lending partners.",
+      q: "How fast is the approval?",
+      a: "Eligibility checks and approvals are designed to be quick, subject to verification.",
     },
     {
-      q: "Is Zippay safe to use?",
-      a: "Absolutely. We use 256-bit encryption, SOC2 certified infrastructure, and follow all RBI guidelines for digital lending. Your data and transactions are completely secure.",
+      q: "Are there hidden charges?",
+      a: "No. All applicable charges are clearly disclosed before proceeding.",
+    },
+    {
+      q: "Is my data secure?",
+      a: "Yes. Zippay follows strict security and data protection practices.",
     },
   ],
   "Eligibility & Application": [
@@ -130,8 +134,8 @@ export default function FAQ() {
               <Sparkles className="w-3.5 h-3.5" />
               Support Center
             </span>
-            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight mb-8">
-              Got <span className="gradient-text">Questions?</span>
+            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight mb-8 text-primary-900">
+              Frequently Asked <span className="text-primary-600">Questions</span>
             </h1>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed mb-12">
               Find quick answers to everything you need to know about Zippay.

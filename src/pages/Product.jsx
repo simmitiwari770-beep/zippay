@@ -21,62 +21,60 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const eligibilityCriteria = [
   "Indian citizen aged 21–55 years",
-  "Valid PAN card & Aadhaar",
-  "Active bank account",
+  "Valid PAN card & Aadhaar documentation",
+  "Active bank account with net-banking",
   "Minimum credit score of 650+",
-  "Regular income source (salaried or self-employed)",
+  "Regular verifiable income source",
 ];
 
 const whoIsItFor = [
   {
     icon: Briefcase,
-    title: "Young Professionals",
-    desc: "Cover unexpected expenses or bridge the gap between paydays.",
-  },
-  {
-    icon: GraduationCap,
-    title: "Students",
-    desc: "Education-related expenses, gadgets, or certification courses.",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Freelancers",
-    desc: "Smooth out income gaps and manage project-based cash flows.",
+    title: "Salaried Professionals",
+    desc: "Designed for individuals with a regular income seeking quick short-term credit solutions.",
   },
   {
     icon: Users,
-    title: "Small Business Owners",
-    desc: "Quick working capital for inventory, equipment, or operations.",
+    title: "Self-employed Individuals",
+    desc: "Tailored credit options for business owners and freelancers managing their cash flows.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Young Professionals",
+    desc: "Perfect for first-time borrowers starting their career and looking for reliable credit.",
+  },
+  {
+    icon: Zap,
+    title: "Digitally Active Users",
+    desc: "Optimized for users who prefer a completely digital and seamless financial experience.",
   },
 ];
 
 const comparisonData = [
   {
-    feature: "Application Process",
-    zippay: "100% Digital",
-    traditional: "Branch Visit Required",
+    feature: "No physical paperwork",
+    zippay: "Verified",
+    traditional: "Heavy Documentations",
   },
   {
-    feature: "Documentation",
-    zippay: "PAN + Aadhaar Only",
-    traditional: "Multiple Documents",
+    feature: "Faster decisioning",
+    zippay: "Real-time",
+    traditional: "Days/Weeks",
   },
   {
-    feature: "Approval Time",
-    zippay: "Under 10 Minutes",
-    traditional: "3-7 Business Days",
+    feature: "Easy repayment tracking",
+    zippay: "Integrated",
+    traditional: "Offline Tracking",
   },
   {
-    feature: "Disbursal Speed",
-    zippay: "Instant to Bank",
-    traditional: "1-3 Days",
+    feature: "Complete digital experience",
+    zippay: "100%",
+    traditional: "Hybrid/Manual",
   },
-  { feature: "Hidden Charges", zippay: "Zero", traditional: "Often Present" },
-  { feature: "Prepayment Penalty", zippay: "None", traditional: "Usually Yes" },
 ];
 
 const loanDetails = [
-  { label: "Loan Amount", value: "₹5,000 – ₹5,00,000" },
+  { label: "Loan Amount", value: "₹5,000 – ₹5,00,000", highlight: true },
   { label: "Tenure", value: "3 – 36 Months" },
   { label: "Interest Rate", value: "Starting 1.5% p.m." },
   { label: "Processing Fee", value: "Up to 2%" },
@@ -91,59 +89,62 @@ export default function Product() {
   const compareRef = useScrollReveal();
 
   return (
-    <main>
-      {/* Hero */}
-      <section className="hero-mesh pt-32 pb-12 relative">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
-        <div className="absolute inset-0 grid-pattern opacity-30" />
+    <main className="overflow-hidden">
+      {/* Product Hero — Professional Finance Redesign */}
+      <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden bg-white">
+        <div className="hero-glow !bg-primary-600/[0.03]" />
+        <div className="grid-overlay opacity-10" />
+        
         <div
           ref={heroRef}
-          className="fade-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+          className="fade-up container-custom relative z-10"
         >
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="badge mb-6 inline-flex">
-                <Sparkles className="w-3.5 h-3.5" />
-                Product
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="max-w-xl">
+              <span className="badge">
+                <Shield className="w-3.5 h-3.5" />
+                Regulated Digital Credit Product
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
-                Short-Term <span className="gradient-text">Digital Loans</span>
-                <br />
-                Built for Speed
+              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8 text-primary-900">
+                Zippay <br />
+                <span className="text-primary-600">Digital Credit</span>
               </h1>
-              <p className="text-lg text-text-secondary max-w-lg leading-relaxed mb-8">
-                From ₹5,000 to ₹5,00,000 — get the credit you need with
-                transparent terms, flexible repayment, and instant disbursal.
+              <p className="text-xl text-text-secondary leading-relaxed mb-10 font-medium">
+                Zippay provides instant access to digital loan solutions designed for short-term financial needs.
               </p>
               <Link to="/contact" className="btn-primary">
-                Apply Now
-                <ArrowRight className="w-4.5 h-4.5" />
+                Apply for Credit
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
 
             {/* Loan Details Card */}
-            <div className="flex justify-center">
-              <div className="gradient-border rounded-3xl w-full max-w-sm">
-                <div className="bg-bg-card rounded-3xl p-8 relative z-10">
-                  <h3 className="text-base font-bold text-text-primary mb-6 flex items-center gap-2">
-                    <CreditCard className="w-4.5 h-4.5 text-primary-400" />
-                    Loan Overview
-                  </h3>
-                  <div className="space-y-0">
-                    {loanDetails.map((d, i) => (
-                      <div
-                        key={i}
-                        className="flex items-center justify-between py-3.5 border-b border-white/[0.04] last:border-0"
-                      >
-                        <span className="text-sm text-text-muted">
-                          {d.label}
-                        </span>
-                        <span className="text-sm font-semibold text-text-primary">
-                          {d.value}
-                        </span>
-                      </div>
-                    ))}
+            <div className="relative">
+              <div className="absolute -inset-10 bg-primary-500/5 blur-[100px] rounded-full" />
+              <div className="bg-white border border-slate-100 rounded-3xl p-10 md:p-12 relative z-10 shadow-xl shadow-primary-900/5 group">
+                <div className="flex items-center gap-4 mb-10">
+                  <div className="w-12 h-12 rounded-xl bg-primary-600 flex items-center justify-center shadow-lg shadow-primary-600/20">
+                    <CreditCard className="w-6 h-6 text-white" />
                   </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-primary-900">Credit Overview</h3>
+                    <p className="text-xs text-primary-600 font-bold uppercase tracking-widest">Instant Approval</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  {loanDetails.map((d, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center justify-between py-4 border-b border-slate-50 last:border-0"
+                    >
+                      <span className="text-text-secondary font-medium">
+                        {d.label}
+                      </span>
+                      <span className={`font-bold ${d.highlight ? "text-primary-600" : "text-primary-900"}`}>
+                        {d.value}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -151,57 +152,54 @@ export default function Product() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Benefits — Premium Grid */}
       <SectionWrapper>
         <div ref={detailsRef} className="fade-up">
           <SectionHeader
-            badge="Benefits"
+            badge="The Edge"
             title={
               <>
-                Why our loans are{" "}
-                <span className="gradient-text">different</span>
+                Key <span className="gradient-text">Highlights</span>
               </>
             }
-            subtitle="Designed with the borrower in mind — not the bank."
+            subtitle="Explore why thousands of users prefer Zippay for their short-term financial needs."
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Zap,
-                title: "Instant Process",
-                desc: "Apply and get approved in minutes, not days.",
-                accent: "from-violet-500 to-purple-600",
+                title: "Quick Eligibility Checks",
+                desc: "Get instant eligibility results with minimal inputs via our advanced AI engine.",
+                accent: "from-blue-500 to-indigo-600",
               },
               {
-                icon: Shield,
-                title: "No Collateral",
-                desc: "Unsecured personal loans — no assets needed.",
-                accent: "from-blue-500 to-cyan-500",
+                icon: BadgeCheck,
+                title: "Fully Digital Onboarding",
+                desc: "Complete your entire application process digitally without any physical paperwork.",
+                accent: "from-purple-500 to-violet-600",
               },
               {
                 icon: Clock,
-                title: "Flexible Tenure",
-                desc: "Choose from 3 to 36 months based on your comfort.",
-                accent: "from-emerald-500 to-teal-500",
+                title: "Short-term & Flexible",
+                desc: "Choose from various short-term, flexible repayment options that fit your budget.",
+                accent: "from-emerald-500 to-teal-600",
               },
               {
-                icon: TrendingUp,
-                title: "Growing Limits",
-                desc: "Your credit limit increases with on-time repayments.",
-                accent: "from-amber-500 to-orange-500",
+                icon: Shield,
+                title: "Transparent Fees",
+                desc: "Enjoy a transparent fee structure with zero hidden charges throughout your loan tenure.",
+                accent: "from-amber-500 to-orange-600",
               },
             ].map((b, i) => (
-              <div key={i} className="gradient-border rounded-3xl card-lift">
-                <div className="bg-bg-card rounded-3xl p-7 text-center relative z-10">
-                  <div
-                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${b.accent} flex items-center justify-center mx-auto mb-4`}
-                  >
-                    <b.icon className="w-6 h-6 text-white" />
+              <div key={i} className="glass-card text-center group active:scale-95 transition-all">
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${b.accent} flex items-center justify-center mx-auto mb-8 shadow-xl shadow-primary-900/10 group-hover:scale-110 transition-all duration-500`}>
+                    <b.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-base font-bold text-text-primary mb-2">
+                  <h3 className="text-2xl font-black text-primary-900 mb-4">
                     {b.title}
                   </h3>
-                  <p className="text-sm text-text-secondary">{b.desc}</p>
+                  <p className="text-text-secondary text-lg leading-relaxed">{b.desc}</p>
                 </div>
               </div>
             ))}
@@ -209,46 +207,46 @@ export default function Product() {
         </div>
       </SectionWrapper>
 
-      {/* Eligibility */}
+      {/* Eligibility — High Contrast Section */}
       <SectionWrapper gradient>
         <div ref={eligRef} className="fade-up">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div>
               <SectionHeader
-                badge="Eligibility"
+                badge="Who Qualifies"
                 title={
                   <>
-                    Are you <span className="gradient-text">eligible?</span>
+                    Simple Criteria for <span className="gradient-text">Instant Credit</span>
                   </>
                 }
-                subtitle="Meeting these simple criteria makes you a candidate for instant credit."
+                subtitle="We believe in financial inclusion. If you meet these criteria, you're ready to go."
                 center={false}
               />
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {eligibilityCriteria.map((c, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04]"
+                    className="flex items-center gap-6 p-6 rounded-3xl bg-white/50 border border-primary-100/50 hover:bg-white transition-all duration-500"
                   >
-                    <CheckCircle className="w-5 h-5 text-accent mt-0.5 shrink-0" />
-                    <p className="text-text-primary font-medium text-sm">{c}</p>
+                    <CheckCircle className="w-7 h-7 text-primary-600 shrink-0" />
+                    <p className="text-primary-900 font-bold text-lg">{c}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="flex justify-center">
-              <div className="gradient-border rounded-3xl">
-                <div className="bg-bg-card rounded-3xl p-8 relative z-10">
-                  <h3 className="text-center text-xs font-bold text-text-muted uppercase tracking-wider mb-6">
-                    Your Score Check
-                  </h3>
-                  <CreditScoreVisual score={720} />
-                  <div className="mt-6 text-center">
-                    <Link to="/contact" className="btn-primary !text-sm">
-                      Check Your Eligibility
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
+            <div className="flex justify-center relative">
+              <div className="absolute -inset-20 bg-primary-500/10 blur-[150px] rounded-full" />
+              <div className="glass-card !p-12 relative z-10 shadow-2xl">
+                <div className="text-center mb-10">
+                  <h3 className="text-xs font-black text-primary-600 uppercase tracking-[0.2em] mb-2">Real-time Check</h3>
+                  <p className="text-2xl font-black text-primary-900">Credit Health</p>
+                </div>
+                <CreditScoreVisual score={750} />
+                <div className="mt-12 text-center">
+                  <Link to="/contact" className="btn-primary w-full justify-center !rounded-2xl">
+                    Check My Full Eligibility
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -256,33 +254,31 @@ export default function Product() {
         </div>
       </SectionWrapper>
 
-      {/* Who Is It For */}
+      {/* Who Is It For — Redesigned Grid */}
       <SectionWrapper>
         <div ref={whoRef} className="fade-up">
           <SectionHeader
-            badge="Made For You"
+            badge="Who Can Apply?"
             title={
               <>
-                Who is <span className="gradient-text">Zippay</span> for?
+                Designed for <span className="gradient-text">Everyone</span>
               </>
             }
-            subtitle="Designed for anyone who values speed, simplicity, and transparency."
+            subtitle="Whatever your background, Zippay provides the digital financial safety net you deserve."
           />
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid md:grid-cols-2 gap-8">
             {whoIsItFor.map((w, i) => (
-              <div key={i} className="gradient-border rounded-3xl card-lift">
-                <div className="bg-bg-card rounded-3xl p-7 flex gap-5 items-start relative z-10">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shrink-0 shadow-lg">
-                    <w.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-bold text-text-primary mb-2">
-                      {w.title}
-                    </h3>
-                    <p className="text-sm text-text-secondary leading-relaxed">
-                      {w.desc}
-                    </p>
-                  </div>
+              <div key={i} className="glass-card !p-10 flex gap-8 items-start group hover:bg-white transition-all duration-700">
+                <div className="w-16 h-16 rounded-2xl bg-primary-100 flex items-center justify-center shrink-0 border border-primary-200 group-hover:bg-primary-600 transition-all duration-700">
+                  <w.icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-all duration-700" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-black text-primary-900 mb-3">
+                    {w.title}
+                  </h3>
+                  <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                    {w.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -290,58 +286,56 @@ export default function Product() {
         </div>
       </SectionWrapper>
 
-      {/* Comparison Table */}
+      {/* Comparison — Architectural Table */}
       <SectionWrapper gradient>
         <div ref={compareRef} className="fade-up">
           <SectionHeader
-            badge="Comparison"
+            badge="Why Zippay?"
             title={
               <>
-                Zippay vs{" "}
-                <span className="gradient-text">Traditional Lending</span>
+                Why Digital Credit with <span className="gradient-text">Zippay?</span>
               </>
             }
-            subtitle="See why thousands are switching to digital-first credit."
+            subtitle="Experience the benefits of a modern lending platform built for the digital age."
           />
-          <div className="rounded-3xl border border-white/10 overflow-hidden max-w-4xl mx-auto shadow-2xl shadow-primary-500/5 bg-bg-card relative">
-            {/* Highlighted column background for Zippay */}
-            <div className="absolute top-0 bottom-0 left-1/3 w-1/3 bg-primary-500/[0.03] border-x border-primary-500/10 pointer-events-none" />
+          <div className="rounded-3xl border border-slate-100 overflow-hidden max-w-5xl mx-auto shadow-xl shadow-primary-900/5 bg-white relative">
+            <div className="absolute top-0 bottom-0 left-1/3 w-1/3 bg-slate-50/50 border-x border-slate-100 pointer-events-none" />
 
             <div className="relative z-10 overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
-                  <tr className="border-b border-white/10 bg-white/[0.02]">
-                    <th className="py-5 px-8 text-sm font-bold tracking-wider text-text-muted uppercase w-1/3">
+                  <tr className="border-b border-primary-100 bg-primary-50/50">
+                    <th className="py-8 px-10 text-xs font-black tracking-[0.2em] text-primary-900 uppercase w-1/3">
                       Feature
                     </th>
-                    <th className="py-5 px-8 text-center w-1/3">
-                      <span className="flex items-center justify-center gap-2 text-primary-400 font-bold text-base">
-                        <Zap className="w-5 h-5" /> Zippay
+                    <th className="py-8 px-10 text-center w-1/3">
+                      <span className="flex items-center justify-center gap-3 text-primary-600 font-black text-xl italic uppercase tracking-tighter">
+                        <Zap className="w-6 h-6" fill="currentColor" /> Zippay
                       </span>
                     </th>
-                    <th className="py-5 px-8 text-center text-sm font-bold tracking-wider text-text-muted uppercase w-1/3">
+                    <th className="py-8 px-10 text-center text-xs font-black tracking-[0.2em] text-text-muted uppercase w-1/3">
                       Traditional
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/5">
+                <tbody className="divide-y divide-primary-50">
                   {comparisonData.map((row, i) => (
                     <tr
                       key={i}
-                      className="hover:bg-white/[0.02] transition-colors duration-300"
+                      className="hover:bg-primary-50/30 transition-colors duration-500"
                     >
-                      <td className="py-6 px-8 font-semibold text-text-primary text-[15px]">
+                      <td className="py-8 px-10 font-bold text-primary-900 text-lg">
                         {row.feature}
                       </td>
-                      <td className="py-6 px-8 text-center">
-                        <span className="inline-flex items-center justify-center gap-2 text-primary-400 font-bold text-[15px] w-full drop-shadow-[0_0_8px_rgba(16,185,129,0.2)]">
-                          <CheckCircle className="w-4.5 h-4.5" />
+                      <td className="py-8 px-10 text-center">
+                        <span className="inline-flex items-center justify-center gap-3 text-primary-600 font-black text-lg">
+                          <CheckCircle className="w-6 h-6 fill-primary-100" />
                           {row.zippay}
                         </span>
                       </td>
-                      <td className="py-6 px-8 text-center">
-                        <span className="inline-flex items-center justify-center gap-2 text-text-muted font-medium text-[15px] w-full">
-                          <AlertCircle className="w-4.5 h-4.5" />
+                      <td className="py-8 px-10 text-center">
+                        <span className="inline-flex items-center justify-center gap-3 text-text-muted font-medium text-lg">
+                          <AlertCircle className="w-5 h-5 opacity-40" />
                           {row.traditional}
                         </span>
                       </td>

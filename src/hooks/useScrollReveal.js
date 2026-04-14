@@ -1,11 +1,18 @@
 import { useEffect, useRef } from "react";
 
-export function useScrollReveal({ threshold = 0.05, rootMargin = "0px" } = {}) {
+export function useScrollReveal({ threshold = 0.01, rootMargin = "0px 0px -60px 0px" } = {}) {
   const ref = useRef(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Immediately make visible if already in viewport on mount
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add("visible");
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -14,10 +21,7 @@ export function useScrollReveal({ threshold = 0.05, rootMargin = "0px" } = {}) {
           observer.unobserve(el);
         }
       },
-      {
-        threshold,
-        rootMargin,
-      },
+      { threshold, rootMargin },
     );
 
     observer.observe(el);
@@ -27,7 +31,7 @@ export function useScrollReveal({ threshold = 0.05, rootMargin = "0px" } = {}) {
   return ref;
 }
 
-export function useScrollRevealMultiple(count, { threshold = 0.05 } = {}) {
+export function useScrollRevealMultiple(count, { threshold = 0.01 } = {}) {
   const refs = useRef([]);
 
   useEffect(() => {

@@ -9,6 +9,7 @@ import {
   Loader2,
   ArrowUpRight,
   Sparkles,
+  Zap,
 } from "lucide-react";
 import SectionWrapper from "../components/SectionWrapper";
 import SectionHeader from "../components/SectionHeader";
@@ -16,23 +17,23 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const supportCards = [
   {
-    icon: Mail,
-    title: "Email Support",
-    desc: "Get a response within 24 hours",
-    action: "support@zippay.in",
-    href: "mailto:support@zippay.in",
-  },
-  {
     icon: MessageSquare,
-    title: "In-App Chat",
-    desc: "Real-time support inside the app",
+    title: "In-app support",
+    desc: "Get real-time assistance directly within the Zippay app.",
     action: "Open App",
     href: "#",
   },
   {
+    icon: Mail,
+    title: "Email support",
+    desc: "Send us an email at support@zippay.in for detailed queries.",
+    action: "support@zippay.in",
+    href: "mailto:support@zippay.in",
+  },
+  {
     icon: HelpCircle,
-    title: "Help Center",
-    desc: "Browse articles and guides",
+    title: "Help center & FAQs",
+    desc: "Search our knowledge base for quick answers to common questions.",
     action: "Visit FAQ",
     href: "/faq",
   },
@@ -82,48 +83,50 @@ export default function Contact() {
   };
 
   return (
-    <main>
-      {/* Hero */}
-      <section className="hero-mesh pt-32 pb-16 relative">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
-        <div className="absolute inset-0 grid-overlay" />
+    <main className="overflow-hidden">
+      {/* Contact Hero — Professional Redesign */}
+      <section className="relative pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden bg-white">
+        <div className="hero-glow !bg-primary-600/[0.03]" />
+
+        
         <div
           ref={heroRef}
-          className="fade-up max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10 text-center"
+          className="fade-up container-custom relative z-10 text-center"
         >
-          <div className="max-w-3xl mx-auto">
-            <span className="badge">
-              <Sparkles className="w-3.5 h-3.5" />
-              Get In Touch
+          <div className="max-w-4xl mx-auto">
+            <span className="badge mx-auto mb-8">
+              <MessageSquare className="w-4 h-4" />
+              Institutional Support Desk
             </span>
-            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight mb-8">
-              We'd Love to <span className="gradient-text">Hear From You</span>
+            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8 text-primary-900">
+              Need Help? <br />
+              <span className="text-primary-600">We're Here.</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              Have questions, feedback, or need support? Our team is ready to
-              help you get the credit you deserve.
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
+              Connect with our specialized finance team. Whether you're seeking 
+              technical support or product clarification, we're here to assist.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Support Cards */}
+      {/* Support Pillars */}
       <SectionWrapper>
-        <div className="grid md:grid-cols-3 gap-6 mb-24">
+        <div className="grid md:grid-cols-3 gap-8 mb-32">
           {supportCards.map((card, i) => (
             <a
               key={i}
               href={card.href}
-              className="glass-card flex flex-col items-center text-center group"
+              className="bg-white border border-slate-100 p-10 rounded-2xl flex flex-col items-center text-center group hover:border-primary-200 hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-primary-600/10 group-hover:border-primary-500/20 transition-all">
-                <card.icon className="w-7 h-7 text-primary-400" />
+              <div className="w-16 h-16 rounded-xl bg-primary-50 flex items-center justify-center mb-8 group-hover:bg-primary-600 transition-all duration-300">
+                <card.icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-all duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-text-primary mb-2">
+              <h3 className="text-xl font-bold text-primary-900 mb-3">
                 {card.title}
               </h3>
-              <p className="text-sm text-text-secondary mb-6">{card.desc}</p>
-              <span className="text-sm font-bold text-primary-400 flex items-center gap-1.5 transition-all group-hover:gap-2.5">
+              <p className="text-text-secondary mb-8 font-medium">{card.desc}</p>
+              <span className="text-primary-600 font-bold text-sm uppercase tracking-widest flex items-center gap-2 transition-all">
                 {card.action}
                 <ArrowUpRight className="w-4 h-4" />
               </span>
@@ -131,44 +134,47 @@ export default function Contact() {
           ))}
         </div>
 
-        {/* Contact Form */}
+        {/* Form Section — Premium Architectural Layout */}
         <div ref={formRef} className="fade-up">
           <SectionHeader
-            badge="Contact Us"
+            badge="Direct Inquiry"
             title={
               <>
-                Send us a <span className="gradient-text">message</span>
+                Let's Start a <span className="gradient-text">Conversation</span>
               </>
             }
-            subtitle="Fill out the form below and we'll get back to you within 24 hours."
+            subtitle="Fill out the architectural form below and our team will synthesize a response within 24 business hours."
           />
 
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             {isSubmitted ? (
-              <div className="glass-card text-center py-16">
-                <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-8">
-                  <CheckCircle className="w-10 h-10 text-accent" />
+              <div className="glass-card !p-20 text-center shadow-2xl">
+                <div className="w-24 h-24 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-10">
+                  <CheckCircle className="w-12 h-12 text-primary-600" />
                 </div>
-                <h3 className="text-2xl font-bold text-text-primary mb-4">
-                  Message Sent!
+                <h3 className="text-4xl font-black text-primary-900 mb-6">
+                  Inquiry Received.
                 </h3>
-                <p className="text-text-secondary mb-10">
-                  Thank you for reaching out. A support expert will contact you
-                  shortly.
+                <p className="text-xl text-text-secondary mb-12 font-medium">
+                  Your message has been successfully routed to our support 
+                  experts. Expect a detailed response shortly.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="text-primary-400 font-bold hover:text-primary-300"
+                  className="btn-primary !px-10 !py-5 !rounded-2xl"
                 >
-                  Send another message
+                  Send Another Inquiry
                 </button>
               </div>
             ) : (
-              <div className="glass-card !p-8 md:!p-12">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-bold uppercase tracking-wider text-text-muted">
+              <div className="bg-white border border-slate-100 p-12 md:p-16 rounded-3xl shadow-xl shadow-primary-900/5 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-10 opacity-[0.02] pointer-events-none">
+                  <Zap className="w-64 h-64 text-primary-900" />
+                </div>
+                <form onSubmit={handleSubmit} className="space-y-10 relative z-10">
+                  <div className="grid md:grid-cols-2 gap-10">
+                    <div className="space-y-4">
+                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
                         Full Name
                       </label>
                       <input
@@ -176,18 +182,18 @@ export default function Contact() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="John Doe"
-                        className={`input-dark ${errors.name ? "border-red-500/30" : ""}`}
+                        placeholder="e.g. Vikram Singh"
+                        className={`input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg ${errors.name ? "!border-red-500/50" : ""}`}
                       />
                       {errors.name && (
-                        <p className="text-xs text-red-400 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
+                        <p className="text-xs text-red-500 font-bold flex items-center gap-2 ml-1">
+                          <AlertCircle className="w-4 h-4" />
                           {errors.name}
                         </p>
                       )}
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-bold uppercase tracking-wider text-text-muted">
+                    <div className="space-y-4">
+                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
                         Email Address
                       </label>
                       <input
@@ -195,66 +201,66 @@ export default function Contact() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="john@example.com"
-                        className={`input-dark ${errors.email ? "border-red-500/30" : ""}`}
+                        placeholder="name@company.com"
+                        className={`input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg ${errors.email ? "!border-red-500/50" : ""}`}
                       />
                       {errors.email && (
-                        <p className="text-xs text-red-400 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
+                        <p className="text-xs text-red-500 font-bold flex items-center gap-2 ml-1">
+                          <AlertCircle className="w-4 h-4" />
                           {errors.email}
                         </p>
                       )}
                     </div>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-bold uppercase tracking-wider text-text-muted">
-                        Phone Number
+                  <div className="grid md:grid-cols-2 gap-10">
+                    <div className="space-y-4">
+                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
+                        Mobile Number
                       </label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="9876543210"
-                        className={`input-dark ${errors.phone ? "border-red-500/30" : ""}`}
+                        placeholder="+91 98765 43210"
+                        className={`input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg ${errors.phone ? "!border-red-500/50" : ""}`}
                       />
                       {errors.phone && (
-                        <p className="text-xs text-red-400 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
+                        <p className="text-xs text-red-500 font-bold flex items-center gap-2 ml-1">
+                          <AlertCircle className="w-4 h-4" />
                           {errors.phone}
                         </p>
                       )}
                     </div>
-                    <div className="space-y-2">
-                      <label className="text-[11px] font-bold uppercase tracking-wider text-text-muted">
-                        Subject
+                    <div className="space-y-4">
+                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
+                        Query Type
                       </label>
                       <input
                         type="text"
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        placeholder="How can we help?"
-                        className="input-dark"
+                        placeholder="Inquiry regarding limit"
+                        className="input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg"
                       />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-[11px] font-bold uppercase tracking-wider text-text-muted">
+                  <div className="space-y-4">
+                    <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
                       Your Message
                     </label>
                     <textarea
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tell us what you're looking for..."
-                      rows={5}
-                      className={`input-dark resize-none ${errors.message ? "border-red-500/30" : ""}`}
+                      placeholder="How can our financial team assist you today?"
+                      rows={6}
+                      className={`input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg resize-none ${errors.message ? "!border-red-500/50" : ""}`}
                     />
                     {errors.message && (
-                      <p className="text-xs text-red-400 flex items-center gap-1">
-                        <AlertCircle className="w-3 h-3" />
+                      <p className="text-xs text-red-500 font-bold flex items-center gap-2 ml-1">
+                        <AlertCircle className="w-4 h-4" />
                         {errors.message}
                       </p>
                     )}
@@ -262,17 +268,18 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="btn-primary w-full justify-center !py-4"
+                    className="btn-primary w-full justify-center !py-4 shadow-xl shadow-primary-600/10 active:scale-95 transition-all"
                   >
                     {isSubmitting ? (
-                      <>
-                        <Loader2 className="w-5 h-5 animate-spin" />{" "}
-                        Processing...
-                      </>
+                      <div className="flex items-center gap-4">
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <span>PROCESSING...</span>
+                      </div>
                     ) : (
-                      <>
-                        <Send className="w-5 h-5" /> Send Message
-                      </>
+                      <div className="flex items-center gap-3 uppercase tracking-widest font-bold">
+                        <Send className="w-5 h-5" />
+                        <span>Submit Inquiry</span>
+                      </div>
                     )}
                   </button>
                 </form>

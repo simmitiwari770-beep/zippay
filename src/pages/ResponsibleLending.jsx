@@ -49,12 +49,10 @@ const principles = [
 ];
 
 const commitments = [
-  "We never charge prepayment or foreclosure penalties",
-  "We provide a complete fee schedule before loan acceptance",
-  "We offer flexible EMI options based on your income",
-  "We send timely reminders — not aggressive collection calls",
-  "We give you the right to file complaints and get resolution",
-  "We regularly review our practices for fairness and compliance",
+  "Clear communication of charges",
+  "No hidden terms",
+  "Encouraging timely repayments",
+  "Supporting informed financial decisions",
 ];
 
 export default function ResponsibleLending() {
@@ -77,13 +75,11 @@ export default function ResponsibleLending() {
               <Sparkles className="w-3.5 h-3.5" />
               Responsible Lending
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
-              Lending with <span className="gradient-text">Integrity</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+              Responsible Credit, <span className="text-primary-600">Built-In</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">
-              At Zippay, responsible lending isn't just policy — it's our
-              foundation. We believe credit should empower you, never burden
-              you.
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
+              Zippay is committed to responsible lending practices that prioritize user well-being and financial discipline.
             </p>
           </div>
         </div>
@@ -127,13 +123,13 @@ export default function ResponsibleLending() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <SectionHeader
-                badge="Our Commitment"
+                badge="What This Means"
                 title={
                   <>
-                    What we <span className="gradient-text">promise</span> you
+                    Our <span className="gradient-text">Promises</span>
                   </>
                 }
-                subtitle="These aren't just words. These are commitments we uphold with every single loan."
+                subtitle="We ensure that every aspect of our lending process is transparent and supportive."
                 center={false}
               />
             </div>
@@ -174,18 +170,18 @@ export default function ResponsibleLending() {
       {/* Help */}
       <SectionWrapper>
         <div className="max-w-2xl mx-auto text-center">
-          <div className="w-14 h-14 rounded-xl bg-primary-600/15 border border-primary-500/20 flex items-center justify-center mx-auto mb-5">
-            <HelpCircle className="w-7 h-7 text-primary-400" />
+          <div className="w-14 h-14 rounded-xl bg-primary-600/15 border border-primary-100 flex items-center justify-center mx-auto mb-6">
+            <Users className="w-7 h-7 text-primary-600" />
           </div>
-          <h2 className="text-2xl font-bold text-text-primary mb-3">
-            Need Help?
+          <h2 className="text-3xl font-black text-primary-900 mb-4">
+            User Responsibility
           </h2>
-          <p className="text-text-secondary mb-6">
-            If you're facing financial difficulties or have concerns about your
-            loan, our support team is here to help you find a solution.
+          <p className="text-text-secondary text-lg leading-relaxed mb-8 font-medium">
+            Users are encouraged to borrow responsibly and ensure timely repayment 
+            to maintain a healthy credit profile.
           </p>
-          <a href="mailto:grievance@zippay.in" className="btn-primary !text-sm">
-            Contact Grievance Officer
+          <a href="/contact" className="btn-primary">
+            Speak to a Support Advisor
           </a>
         </div>
       </SectionWrapper>

@@ -46,14 +46,17 @@ export default function Terms() {
         your loan agreement.
       </p>
 
-      <h2>4. User Responsibilities</h2>
+      <h2>4. User Obligations</h2>
+      <p>By using Zippay, users agree to:</p>
       <ul>
-        <li>Provide accurate and truthful information</li>
-        <li>Keep your account credentials secure</li>
-        <li>Notify us immediately of any unauthorized access</li>
-        <li>Use the borrowed funds responsibly</li>
-        <li>Make timely repayments</li>
+        <li>Provide accurate information and truthful data during application</li>
+        <li>Use the platform responsibly and within the legal framework</li>
+        <li>Understand that credit approval is subject to eligibility and internal checks</li>
+        <li>Accept and fulfill repayment obligations as per the agreed terms</li>
       </ul>
+      <p className="mt-8 font-bold text-primary-900 italic">
+        Note: Zippay does not guarantee approval, specific credit limits, or processing timelines.
+      </p>
 
       <h2>5. Intellectual Property</h2>
       <p>
