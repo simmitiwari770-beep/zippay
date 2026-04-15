@@ -149,7 +149,7 @@ export default function HowItWorks() {
             ))}
           </div>
         </div>
-      </SectionWrapper>apper>
+      </SectionWrapper>
 
       {/* Post-Approval — Premium Banner Grid */}
       <SectionWrapper gradient>
