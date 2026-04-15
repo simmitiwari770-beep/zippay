@@ -167,14 +167,14 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <div className="bg-white border border-slate-100 p-12 md:p-16 rounded-3xl shadow-xl shadow-primary-900/5 relative overflow-hidden group">
+              <div className="bg-white border-2 border-primary-100 p-12 md:p-16 rounded-[2.5rem] shadow-[0_20px_50px_rgba(124,58,237,0.05)] relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-10 opacity-[0.02] pointer-events-none">
                   <Zap className="w-64 h-64 text-primary-900" />
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-10 relative z-10">
                   <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-4">
-                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
+                      <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-900/70 ml-1">
                         Full Name
                       </label>
                       <input
@@ -183,7 +183,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="e.g. Vikram Singh"
-                        className={`input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg ${errors.name ? "!border-red-500/50" : ""}`}
+                        className={`input-dark !bg-white border-2 !border-primary-50 !rounded-2xl !p-5 !text-lg focus:!border-primary-500 transition-all ${errors.name ? "!border-red-500" : ""}`}
                       />
                       {errors.name && (
                         <p className="text-xs text-red-500 font-bold flex items-center gap-2 ml-1">
@@ -193,7 +193,7 @@ export default function Contact() {
                       )}
                     </div>
                     <div className="space-y-4">
-                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
+                      <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-900/70 ml-2">
                         Email Address
                       </label>
                       <input
@@ -202,7 +202,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="name@company.com"
-                        className={`input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg ${errors.email ? "!border-red-500/50" : ""}`}
+                        className={`input-dark !bg-white border-2 !border-primary-50 !rounded-2xl !p-5 !text-lg focus:!border-primary-500 transition-all ${errors.email ? "!border-red-500" : ""}`}
                       />
                       {errors.email && (
                         <p className="text-xs text-red-500 font-bold flex items-center gap-2 ml-1">
@@ -214,7 +214,7 @@ export default function Contact() {
                   </div>
                   <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-4">
-                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
+                      <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-900/70 ml-1">
                         Mobile Number
                       </label>
                       <input
@@ -223,7 +223,7 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+91 98765 43210"
-                        className={`input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg ${errors.phone ? "!border-red-500/50" : ""}`}
+                        className={`input-dark !bg-white border-2 !border-primary-50 !rounded-2xl !p-5 !text-lg focus:!border-primary-500 transition-all ${errors.phone ? "!border-red-500" : ""}`}
                       />
                       {errors.phone && (
                         <p className="text-xs text-red-500 font-bold flex items-center gap-2 ml-1">
@@ -233,7 +233,7 @@ export default function Contact() {
                       )}
                     </div>
                     <div className="space-y-4">
-                      <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
+                      <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-900/70 ml-2">
                         Query Type
                       </label>
                       <input
@@ -242,12 +242,12 @@ export default function Contact() {
                         value={formData.subject}
                         onChange={handleChange}
                         placeholder="Inquiry regarding limit"
-                        className="input-dark !bg-primary-50/30 !rounded-2xl !p-5 !text-lg"
+                        className="input-dark !bg-white border-2 !border-primary-50 !rounded-2xl !p-5 !text-lg focus:!border-primary-500 transition-all"
                       />
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <label className="text-xs font-black uppercase tracking-[0.2em] text-primary-900/40 ml-1">
+                    <label className="text-[11px] font-black uppercase tracking-[0.2em] text-primary-900/70 ml-1">
                       Your Message
                     </label>
                     <textarea
