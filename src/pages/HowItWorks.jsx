@@ -139,10 +139,10 @@ export default function HowItWorks() {
                           Step {s.step}
                         </span>
                       </div>
-                      <h3 className="text-3xl md:text-4xl font-black text-primary-900 tracking-tight">
+                      <h3 className="text-2xl md:text-3xl font-black text-primary-900 tracking-tight">
                         {s.title}
                       </h3>
-                      <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                      <p className="text-base text-text-secondary leading-relaxed font-medium">
                         {s.desc}
                       </p>
                     </div>
@@ -183,14 +183,14 @@ export default function HowItWorks() {
           />
           <div className="grid md:grid-cols-3 gap-8">
             {afterSteps.map((s, i) => (
-              <div key={i} className="glass-card !p-12 text-center group hover:scale-[1.05] transition-all duration-700">
-                <div className="w-20 h-20 rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center mx-auto mb-10 group-hover:bg-primary-600 transition-all duration-700">
-                  <s.icon className="w-10 h-10 text-primary-600 group-hover:text-white transition-all duration-700" />
+              <div key={i} className="glass-card !p-8 text-center group hover:scale-[1.05] transition-all duration-700">
+                <div className="w-16 h-16 rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center mx-auto mb-8 group-hover:bg-primary-600 transition-all duration-700">
+                  <s.icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-all duration-700" />
                 </div>
-                <h3 className="text-2xl font-black text-primary-900 mb-4">
+                <h3 className="text-xl font-black text-primary-900 mb-4 tracking-tight">
                   {s.title}
                 </h3>
-                <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                <p className="text-base text-text-secondary leading-relaxed font-medium">
                   {s.desc}
                 </p>
               </div>
