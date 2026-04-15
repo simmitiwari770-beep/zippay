@@ -107,6 +107,7 @@ export default function HowItWorks() {
             </p>
           </div>
         </div>
+      </section>
       {/* Journey Roadmap — Premium Fintech Vertical Redesign */}
       <SectionWrapper>
         <div ref={stepsRef} className="fade-up">
