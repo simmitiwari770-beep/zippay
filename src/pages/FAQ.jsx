@@ -164,10 +164,10 @@ export default function FAQ() {
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-3 rounded-2xl text-xs font-bold tracking-widest uppercase transition-all ${
+                  className={`px-8 py-3.5 rounded-2xl text-[11px] font-black tracking-[0.15em] uppercase transition-all duration-300 ${
                     activeCategory === cat
-                      ? "bg-primary-600 text-white shadow-lg shadow-primary-600/20"
-                      : "bg-white/5 text-text-secondary border border-white/10 hover:bg-white/10 hover:text-white"
+                      ? "bg-primary-600 text-white shadow-xl shadow-primary-600/30 -translate-y-0.5"
+                      : "bg-white text-primary-900/40 border border-primary-100 hover:bg-primary-500 hover:text-white hover:border-primary-500 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-600/20"
                   }`}
                 >
                   {cat}
