@@ -195,10 +195,10 @@ export default function Product() {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${b.accent} flex items-center justify-center mx-auto mb-8 shadow-xl shadow-primary-900/10 group-hover:scale-110 transition-all duration-500`}>
                     <b.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-black text-primary-900 mb-4">
+                  <h3 className="text-xl font-black text-primary-900 mb-3 tracking-tight">
                     {b.title}
                   </h3>
-                  <p className="text-text-secondary text-lg leading-relaxed">{b.desc}</p>
+                  <p className="text-text-secondary text-base leading-relaxed">{b.desc}</p>
                 </div>
               </div>
             ))}
@@ -267,15 +267,15 @@ export default function Product() {
           />
           <div className="grid md:grid-cols-2 gap-8">
             {whoIsItFor.map((w, i) => (
-              <div key={i} className="glass-card !p-10 flex gap-8 items-start group hover:bg-white transition-all duration-700">
-                <div className="w-16 h-16 rounded-2xl bg-primary-100 flex items-center justify-center shrink-0 border border-primary-200 group-hover:bg-primary-600 transition-all duration-700">
-                  <w.icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-all duration-700" />
+              <div key={i} className="glass-card !p-8 flex gap-6 items-start group hover:bg-white transition-all duration-700">
+                <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center shrink-0 border border-primary-200 group-hover:bg-primary-600 transition-all duration-700">
+                  <w.icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-all duration-700" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-black text-primary-900 mb-3">
+                  <h3 className="text-xl font-black text-primary-900 mb-2 tracking-tight">
                     {w.title}
                   </h3>
-                  <p className="text-lg text-text-secondary leading-relaxed font-medium">
+                  <p className="text-base text-text-secondary leading-relaxed font-medium">
                     {w.desc}
                   </p>
                 </div>

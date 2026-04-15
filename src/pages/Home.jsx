@@ -323,8 +323,8 @@ export default function Home() {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${f.accent} flex items-center justify-center mb-8 shadow-xl shadow-primary-900/10`}>
                     <f.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-black text-primary-900 mb-4">{f.title}</h3>
-                  <p className="text-text-secondary leading-relaxed text-lg">
+                  <h3 className="text-xl font-black text-primary-900 mb-3 tracking-tight">{f.title}</h3>
+                  <p className="text-text-secondary leading-relaxed text-base">
                     {f.desc}
                   </p>
                 </div>
@@ -379,8 +379,8 @@ export default function Home() {
                 <div className="mx-auto w-16 h-16 rounded-full bg-white border-2 border-primary-500 flex items-center justify-center mb-6 relative z-10 shadow-xl shadow-primary-600/10 group-hover:scale-110 group-hover:bg-primary-50 transition-all duration-500">
                   <span className="text-xl font-black text-primary-600">0{i + 1}</span>
                 </div>
-                <h3 className="text-lg font-black text-primary-900 mb-2">{s.title}</h3>
-                <p className="text-text-secondary text-sm leading-relaxed font-medium">
+                <h3 className="text-base font-black text-primary-900 mb-1.5">{s.title}</h3>
+                <p className="text-text-secondary text-[13px] leading-relaxed font-medium">
                   {s.desc}
                 </p>
               </div>
@@ -465,10 +465,10 @@ export default function Home() {
                       <CheckCircle2 className="w-5 h-5 text-primary-600 group-hover/item:text-white" />
                     </div>
                     <div>
-                      <h4 className="text-md font-black text-primary-900 mb-0.5 leading-tight">
+                      <h4 className="text-sm font-black text-primary-900 mb-0.5 leading-tight">
                         {item.t}
                       </h4>
-                      <p className="text-text-secondary leading-tight opacity-70 font-medium text-xs">
+                      <p className="text-text-secondary leading-tight opacity-70 font-medium text-[11px]">
                         {item.d}
                       </p>
                     </div>
@@ -503,7 +503,7 @@ export default function Home() {
                 <div className="trust-icon-box">
                   <t.icon className="w-8 h-8 text-primary-600" />
                 </div>
-                <h4 className="text-lg font-black text-primary-900 mb-1">{t.title}</h4>
+                <h4 className="text-base font-black text-primary-900 mb-1">{t.title}</h4>
                 <p className="text-[10px] text-text-muted font-black uppercase tracking-widest">{t.label}</p>
               </div>
             ))}
@@ -551,8 +551,8 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] font-black text-violet-500 uppercase tracking-widest">Score Up</span>
               </div>
-              <p className="text-xl font-black text-slate-900 mb-1">Credit Builder</p>
-              <p className="text-xs font-medium text-text-secondary leading-tight mb-4">
+              <p className="text-lg font-black text-slate-900 mb-1">Credit Builder</p>
+              <p className="text-[11px] font-medium text-text-secondary leading-snug mb-4">
                 Watch your score improve as our AI reports every on-time repayment.
               </p>
               <div className="flex items-center gap-2">
@@ -574,8 +574,8 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] font-black text-sky-500 uppercase tracking-widest">On Track</span>
               </div>
-              <p className="text-xl font-black text-slate-900 mb-1">Dynamic Repayment</p>
-              <p className="text-xs font-medium text-text-secondary leading-tight mb-4">
+              <p className="text-lg font-black text-slate-900 mb-1">Dynamic Repayment</p>
+              <p className="text-[11px] font-medium text-text-secondary leading-snug mb-4">
                 Adjust your repayment schedule to match your cash flow fluctuations.
               </p>
               <div className="grid grid-cols-6 gap-1">
