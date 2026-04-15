@@ -94,15 +94,15 @@ export default function Contact() {
           className="fade-up container-custom relative z-10 text-center"
         >
           <div className="max-w-4xl mx-auto">
-            <span className="badge mx-auto mb-8">
+            <span className="badge mx-auto mb-6">
               <MessageSquare className="w-4 h-4" />
               Institutional Support Desk
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8 text-primary-900">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
               Need Help? <br />
               <span className="text-primary-600">We're Here.</span>
             </h1>
-            <p className="text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
               Connect with our specialized finance team. Whether you're seeking 
               technical support or product clarification, we're here to assist.
             </p>

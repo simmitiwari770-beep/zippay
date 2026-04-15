@@ -88,22 +88,20 @@ export default function HowItWorks() {
       {/* Hero — Flagship Redesign */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="hero-glow" />
-        <div className="grid-overlay opacity-20" />
-        
         <div
           ref={heroRef}
           className="fade-up container-custom relative z-10"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <span className="badge mx-auto mb-8">
+            <span className="badge mx-auto mb-6">
               <Sparkles className="w-4 h-4" />
               The Zippay Methodology
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tighter mb-10 text-primary-900">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
               Simple. Fast. <br />
-              <span className="gradient-text">Digital.</span>
+              <span className="text-primary-600">Digital.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium opacity-80">
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
               We've engineered a frictionless journey that turns a few clicks 
               into instant buying power. Here's exactly how it works.
             </p>
@@ -213,7 +211,6 @@ export default function HowItWorks() {
           ref={ctaRef}
           className="fade-up relative overflow-hidden rounded-[60px] bg-gradient-to-br from-primary-600 to-primary-900 p-16 md:p-32 text-center text-white"
         >
-          <div className="absolute inset-0 grid-overlay !opacity-10" />
           <div className="hero-glow !bg-white/5" />
           
           <div className="max-w-4xl mx-auto relative z-10">

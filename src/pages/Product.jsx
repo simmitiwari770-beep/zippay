@@ -94,23 +94,21 @@ export default function Product() {
       {/* Product Hero — Professional Finance Redesign */}
       <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden bg-white">
         <div className="hero-glow !bg-primary-600/[0.03]" />
-        <div className="grid-overlay opacity-10" />
-        
         <div
           ref={heroRef}
           className="fade-up container-custom relative z-10"
         >
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="max-w-xl">
-              <span className="badge">
+              <span className="badge mb-6">
                 <Shield className="w-3.5 h-3.5" />
                 Regulated Digital Credit Product
               </span>
-              <h1 className="text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight mb-8 text-primary-900">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
                 Zippay <br />
                 <span className="text-primary-600">Digital Credit</span>
               </h1>
-              <p className="text-xl text-text-secondary leading-relaxed mb-10 font-medium">
+              <p className="text-lg text-text-secondary leading-relaxed mb-10 font-medium">
                 Zippay provides instant access to digital loan solutions designed for short-term financial needs.
               </p>
               <Link to="/contact" className="btn-primary">

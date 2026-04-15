@@ -124,20 +124,19 @@ export default function FAQ() {
       {/* Hero */}
       <section className="hero-mesh pt-32 pb-16 relative">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary-600/10 rounded-full blur-[100px] animate-blob" />
-        <div className="absolute inset-0 grid-overlay" />
         <div
           ref={heroRef}
           className="fade-up max-w-7xl mx-auto px-6 sm:px-12 lg:px-16 relative z-10 text-center"
         >
           <div className="max-w-3xl mx-auto">
-            <span className="badge">
+            <span className="badge mb-6 inline-flex">
               <Sparkles className="w-3.5 h-3.5" />
               Support Center
             </span>
-            <h1 className="text-5xl md:text-6xl font-black tracking-tight leading-tight mb-8 text-primary-900">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
               Frequently Asked <span className="text-primary-600">Questions</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed mb-12">
+            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
               Find quick answers to everything you need to know about Zippay.
             </p>
 

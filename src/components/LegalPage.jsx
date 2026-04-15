@@ -8,7 +8,6 @@ export default function LegalPage({ title, badge, lastUpdated, children }) {
     <main>
       <section className="hero-mesh pt-32 pb-16 relative">
         <div className="absolute top-20 right-10 w-96 h-96 bg-primary-600/5 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 grid-overlay opacity-30" />
         <div
           ref={heroRef}
           className="fade-up max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
@@ -18,7 +17,7 @@ export default function LegalPage({ title, badge, lastUpdated, children }) {
               <Sparkles className="w-3.5 h-3.5" />
               {badge}
             </span>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight leading-tight mb-4 text-text-primary">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
               {title}
             </h1>
             {lastUpdated && (
