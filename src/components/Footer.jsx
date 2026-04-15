@@ -92,27 +92,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info — Professional Minimalist Card */}
+          {/* Contact Info — Professional Horizontal Card */}
           <div className="bg-white border border-primary-100 p-8 rounded-[2rem] shadow-sm relative overflow-hidden flex flex-col justify-center">
-            <h4 className="text-primary-900 font-extrabold text-[11px] uppercase tracking-[0.2em] mb-10 text-center">Reach Out</h4>
-            <div className="space-y-10">
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-primary-600 flex items-center justify-center shadow-lg shadow-primary-600/20 mb-1">
+            <h4 className="text-primary-900 font-extrabold text-[11px] uppercase tracking-[0.2em] mb-10 ml-1">Reach Out</h4>
+            <div className="space-y-8">
+              <div className="flex items-center gap-5">
+                <div className="w-11 h-11 rounded-2xl bg-primary-600 flex items-center justify-center shadow-lg shadow-primary-600/20 shrink-0">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-primary-600 uppercase tracking-widest mb-1">Email Support</p>
-                  <p className="text-sm font-bold text-primary-900">support@zippay.in</p>
+                  <p className="text-[10px] font-black text-primary-600 uppercase tracking-widest mb-0.5">Email Support</p>
+                  <p className="text-base font-bold text-primary-900">support@zippay.in</p>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 mb-1">
+              <div className="flex items-center gap-5">
+                <div className="w-11 h-11 rounded-2xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 shrink-0">
                   <ShieldCheck className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-1">Regulatory Status</p>
-                  <p className="text-sm font-bold text-primary-900">RBI Regulated Entity</p>
+                  <p className="text-[10px] font-black text-emerald-600 uppercase tracking-widest mb-0.5">Status</p>
+                  <p className="text-base font-bold text-primary-900">RBI Regulated</p>
                 </div>
               </div>
             </div>
