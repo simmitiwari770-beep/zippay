@@ -626,21 +626,19 @@ export default function Home() {
       <SectionWrapper id="final">
         <div
           ref={ctaRef}
-          className="fade-up relative overflow-hidden rounded-3xl bg-primary-900 p-16 md:p-24 text-center text-white"
+          className="fade-up relative overflow-hidden rounded-2xl bg-primary-900 p-10 md:p-14 text-center text-white"
         >
-
-
           <div className="relative z-10 max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-[1.1] tracking-tight">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-[1.1] tracking-tight">
               Need Instant Credit? <br />
               <span className="text-primary-300">Zippay Has You Covered.</span>
             </h2>
-            <p className="text-xl text-white/70 mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
+            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
               Experience the future of digital lending today.
               Simple, secure, and remarkably fast approval.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/contact" className="px-10 py-4 bg-white text-primary-900 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="px-10 py-3 bg-white text-primary-900 rounded-xl font-bold text-base hover:bg-slate-50 transition-all shadow-xl">
                 Get Started Now
               </Link>
             </div>
