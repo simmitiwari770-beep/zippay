@@ -107,73 +107,49 @@ export default function HowItWorks() {
             </p>
           </div>
         </div>
-      </section>
-
-      {/* Timeline Steps — Redesigned Component */}
+      </section>      {/* Process Steps — Professional Compact Grid */}
       <SectionWrapper>
         <div ref={stepsRef} className="fade-up">
-          <div className="max-w-5xl mx-auto relative pt-12">
-            {/* Architectural Line */}
-            <div className="absolute left-10 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary-200 via-primary-500/20 to-transparent md:-translate-x-px" />
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 relative">
+            {/* Desktop Connector Line */}
+            <div className="hidden lg:block absolute top-[45px] left-[10%] right-[10%] h-[2px] bg-primary-100 -z-10" />
 
             {mainSteps.map((s, i) => (
-              <div
-                key={i}
-                className={`relative flex items-start gap-12 mb-24 last:mb-0 ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
-                {/* Visual Anchor */}
-                <div className="absolute left-10 md:left-1/2 -translate-x-1/2 z-10">
-                  <div
-                    className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${s.accent} flex items-center justify-center shadow-2xl shadow-primary-900/10 border-4 border-white group hover:scale-110 transition-transform duration-700`}
-                  >
-                    <s.icon className="w-10 h-10 text-white" />
+              <div key={i} className="flex flex-col items-center group">
+                {/* Step Marker & Icon */}
+                <div className="relative mb-10">
+                  <div className={`w-20 h-20 rounded-[2rem] bg-white border-2 border-primary-50 flex items-center justify-center shadow-xl shadow-primary-900/5 group-hover:border-primary-600 group-hover:bg-primary-50 transition-all duration-500 relative z-10`}>
+                    <s.icon className="w-8 h-8 text-primary-600" />
+                  </div>
+                  {/* Step Number Badge */}
+                  <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-primary-900 text-white text-[10px] font-black flex items-center justify-center shadow-lg border-2 border-white">
+                    {s.step}
                   </div>
                 </div>
 
-                {/* Step Card — Glass Redesign */}
-                <div
-                  className={`ml-28 md:ml-0 md:w-[calc(50%-4rem)] ${
-                    i % 2 === 0
-                      ? "md:pr-0 md:text-right md:mr-auto"
-                      : "md:pl-0 md:ml-auto"
-                  }`}
-                >
-                  <div className="glass-card hover:bg-white !p-10 !rounded-[40px] transition-all duration-700">
-                    <span className="text-6xl font-black text-primary-200/40 block mb-6">
-                      {s.step}
-                    </span>
-                    <h3 className="text-3xl font-black text-primary-900 mb-6 font-primary">
-                      {s.title}
-                    </h3>
-                    <p className="text-lg text-text-secondary leading-relaxed mb-8">
-                      {s.desc}
-                    </p>
-                    <div
-                      className={`flex flex-col gap-4 ${i % 2 === 0 ? "md:items-end" : ""}`}
-                    >
-                      {s.details.map((d, j) => (
-                        <div
-                          key={j}
-                          className={`flex items-center gap-3 ${i % 2 === 0 ? "md:flex-row-reverse" : ""}`}
-                        >
-                          <div className="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center shrink-0">
-                            <CheckCircle className="w-4 h-4 text-primary-600" />
-                          </div>
-                          <span className="text-sm text-primary-900 font-bold tracking-tight">
-                            {d}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
+                {/* Content Card — Compact Fintech Style */}
+                <div className="text-center space-y-4 px-4">
+                  <h3 className="text-xl font-black text-primary-900 tracking-tight leading-tight">
+                    {s.title}
+                  </h3>
+                  <p className="text-sm font-medium text-text-secondary leading-relaxed">
+                    {s.desc}
+                  </p>
+                  
+                  {/* Micro Details List */}
+                  <div className="flex flex-wrap justify-center gap-2 pt-2">
+                    {s.details.map((d, j) => (
+                      <span key={j} className="text-[9px] font-black uppercase tracking-widest px-3 py-1.5 bg-primary-50 text-primary-600 rounded-full border border-primary-100">
+                        {d}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </SectionWrapper>
+      </SectionWrapper>apper>
 
       {/* Post-Approval — Premium Banner Grid */}
       <SectionWrapper gradient>
