@@ -129,7 +129,7 @@ export default function Home() {
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link to="/eligibility" className="px-8 py-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 hover:bg-white transition-all">
+                <Link to="/product" className="px-8 py-4 rounded-xl bg-primary-50 border border-primary-200 font-bold text-primary-700 hover:bg-primary-600 hover:text-white hover:shadow-lg hover:shadow-primary-600/20 transition-all">
                   Check Eligibility
                 </Link>
               </div>
@@ -640,7 +640,7 @@ export default function Home() {
               Simple, secure, and remarkably fast approval.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/contact" className="px-10 py-4 bg-white text-primary-900 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all shadow-xl">
+              <Link to="/contact" className="px-10 py-4 bg-white text-primary-900 rounded-xl font-bold text-lg hover:bg-primary-600 hover:text-white transition-all shadow-xl">
                 Get Started Now
               </Link>
             </div>
