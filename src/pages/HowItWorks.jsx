@@ -203,25 +203,25 @@ export default function HowItWorks() {
       <SectionWrapper>
         <div
           ref={ctaRef}
-          className="fade-up relative overflow-hidden rounded-[60px] bg-gradient-to-br from-primary-600 to-primary-900 p-16 md:p-32 text-center text-white"
+          className="fade-up relative overflow-hidden rounded-[40px] bg-gradient-to-br from-primary-600 to-primary-900 p-12 md:p-20 text-center text-white"
         >
           <div className="hero-glow !bg-white/5" />
           
           <div className="max-w-4xl mx-auto relative z-10">
-            <h2 className="text-4xl md:text-6xl font-black mb-10 leading-[1.1] tracking-tighter">
+            <h2 className="text-3xl md:text-5xl font-black mb-8 leading-[1.1] tracking-tighter">
               Start Your Journey <br />
               <span className="text-primary-300">In Under 10 Minutes.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-white/80 mb-16 max-w-2xl mx-auto font-medium">
+            <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
               Don't wait for banks. Join Zippay and experience the 
               power of truly instant digital credit today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link to="/contact" className="px-12 py-5 bg-white text-primary-700 rounded-3xl font-black text-xl hover:scale-110 active:scale-95 transition-all shadow-2xl shadow-black/20">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center">
+              <Link to="/contact" className="px-10 py-4 bg-white text-primary-700 rounded-[1.25rem] font-black text-base hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/10 flex items-center justify-center gap-2">
                 Get Started Now
-                <Zap className="w-5 h-5" />
+                <Zap className="w-4 h-4" />
               </Link>
-              <Link to="/about" className="px-12 py-5 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl font-black text-xl hover:bg-white/20 transition-all">
+              <Link to="/about" className="px-10 py-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-[1.25rem] font-black text-base hover:bg-white/20 transition-all flex items-center justify-center">
                 Learn More
               </Link>
             </div>
