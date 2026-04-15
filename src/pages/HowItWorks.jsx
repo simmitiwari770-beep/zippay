@@ -86,7 +86,7 @@ export default function HowItWorks() {
   return (
     <main className="overflow-hidden">
       {/* Hero — Flagship Redesign */}
-      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+      <section className="relative pt-32 pb-16 overflow-hidden">
         <div className="hero-glow" />
         <div
           ref={heroRef}

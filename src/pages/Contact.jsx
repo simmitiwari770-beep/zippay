@@ -85,7 +85,7 @@ export default function Contact() {
   return (
     <main className="overflow-hidden">
       {/* Contact Hero — Professional Redesign */}
-      <section className="relative pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden bg-white">
+      <section className="relative pt-32 pb-12 overflow-hidden bg-white">
         <div className="hero-glow !bg-primary-600/[0.03]" />
 
         

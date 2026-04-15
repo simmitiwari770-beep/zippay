@@ -92,7 +92,7 @@ export default function Product() {
   return (
     <main className="overflow-hidden">
       {/* Product Hero — Professional Finance Redesign */}
-      <section className="relative pt-32 pb-16 md:pt-48 md:pb-32 overflow-hidden bg-white">
+      <section className="relative pt-32 pb-16 overflow-hidden bg-white">
         <div className="hero-glow !bg-primary-600/[0.03]" />
         <div
           ref={heroRef}
