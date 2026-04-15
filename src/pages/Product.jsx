@@ -5,6 +5,7 @@ import {
   Shield,
   Zap,
   CheckCircle,
+  BadgeCheck,
   ArrowRight,
   Briefcase,
   GraduationCap,
