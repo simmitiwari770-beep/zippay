@@ -116,11 +116,11 @@ export default function Home() {
                 <ShieldCheck className="w-3.5 h-3.5" />
                 RBI Regulated • ISO 27001 Certified
               </span>
-              <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight mb-8 text-primary-900">
+              <h1 className="mb-8">
                 Instant Digital Loans. <br />
                 <span className="text-primary-600">Anytime. Anywhere.</span>
               </h1>
-              <p className="text-lg md:text-xl text-text-secondary max-w-xl leading-relaxed mb-12 font-medium">
+              <p className="text-base md:text-lg text-text-secondary max-w-xl leading-relaxed mb-12 font-medium">
                 Get quick access to short-term digital credit with a simple, paperless, and fully online experience.
                 No long queues. No confusion. Just fast approvals.
               </p>
@@ -129,7 +129,7 @@ export default function Home() {
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link to="/eligibility" className="px-8 py-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 hover:bg-white transition-all">
+                <Link to="/product" className="px-8 py-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 hover:bg-white transition-all">
                   Check Eligibility
                 </Link>
               </div>
@@ -214,16 +214,16 @@ export default function Home() {
               <span className="inline-block px-4 py-1.5 rounded-full bg-primary-50 border border-primary-100 text-[10px] font-black text-primary-600 uppercase tracking-[0.2em] mb-6">
                 What is Zippay?
               </span>
-              <h2 className="text-5xl md:text-7xl font-black text-primary-950 leading-[1.05] tracking-tight mb-8">
+              <h2 className="mb-8">
                 Credit That <br />
                 <span className="text-primary-600">Moves at your Speed</span>
               </h2>
               <div className="w-20 h-1.5 bg-primary-600 rounded-full mb-10" />
-              <p className="text-xl text-slate-600 leading-relaxed font-medium mb-6">
+              <p className="text-lg text-slate-600 leading-relaxed font-medium mb-6">
                 Zippay is an institutional-grade digital lending platform designed for India's fast-moving lifestyle.
                 Our infrastructure enables instant credit access through a zero-friction digital experience.
               </p>
-              <p className="text-lg text-slate-500 leading-relaxed font-medium capitalize-first tracking-tight">
+              <p className="text-base text-slate-500 leading-relaxed font-medium capitalize-first tracking-tight">
                 From real-time eligibility assessment to lightning-fast disbursals, we bridge the gap between financial needs and immediate liquidity with absolute transparency.
               </p>
             </div>
@@ -239,8 +239,8 @@ export default function Home() {
                   <CloudLightning className="w-8 h-8 text-white" />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-black text-primary-950 uppercase tracking-tight">Digital First</h4>
-                  <p className="text-xs font-bold text-primary-600 uppercase tracking-widest">Our Core Advantage</p>
+                  <h4 className="text-xl font-black text-primary-950 uppercase tracking-tight">Digital First</h4>
+                  <p className="text-[10px] font-bold text-primary-600 uppercase tracking-widest">Our Core Advantage</p>
                 </div>
               </div>
 
@@ -320,11 +320,11 @@ export default function Home() {
             ].map((f, i) => (
               <div key={i} className="glass-card group hover:scale-[1.02] active:scale-95 transition-all">
                 <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${f.accent} flex items-center justify-center mb-8 shadow-xl shadow-primary-900/10`}>
-                    <f.icon className="w-8 h-8 text-white" />
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${f.accent} flex items-center justify-center mb-8 shadow-xl shadow-primary-900/10`}>
+                    <f.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-black text-primary-900 mb-3 tracking-tight">{f.title}</h3>
-                  <p className="text-text-secondary leading-relaxed text-base">
+                  <h3 className="text-lg md:text-xl mb-3">{f.title}</h3>
+                  <p className="text-text-secondary leading-relaxed text-sm font-medium">
                     {f.desc}
                   </p>
                 </div>
@@ -347,10 +347,10 @@ export default function Home() {
             subtitle="Applying for a loan shouldn't be a hurdle. With Zippay, it's a breeze."
           />
           <div className="flex flex-wrap gap-12 justify-center mt-16 relative">
-            {/* Automatic Seamless Connecting Line */}
-            <div className="absolute top-8 left-[8%] right-[8%] h-[2px] hidden md:block -z-0">
-              <div className="absolute inset-0 bg-primary-100/30" />
-              <div className="absolute top-0 left-0 h-full bg-primary-600 animate-connection shadow-[0_0_15px_rgba(109,40,217,0.6)]" />
+            {/* Solid Connecting Line */}
+            <div className="absolute top-8 left-[10%] right-[10%] h-[3px] hidden md:block -z-0">
+              <div className="absolute inset-0 bg-primary-600/50 rounded-full blur-[1px]" />
+              <div className="absolute inset-0 bg-primary-600 rounded-full" />
             </div>
 
             {[
@@ -379,7 +379,7 @@ export default function Home() {
                 <div className="mx-auto w-16 h-16 rounded-full bg-white border-2 border-primary-500 flex items-center justify-center mb-6 relative z-10 shadow-xl shadow-primary-600/10 group-hover:scale-110 group-hover:bg-primary-50 transition-all duration-500">
                   <span className="text-xl font-black text-primary-600">0{i + 1}</span>
                 </div>
-                <h3 className="text-base font-black text-primary-900 mb-1.5">{s.title}</h3>
+                <h3 className="text-[18px] mb-1.5">{s.title}</h3>
                 <p className="text-text-secondary text-[13px] leading-relaxed font-medium">
                   {s.desc}
                 </p>
@@ -392,32 +392,36 @@ export default function Home() {
       {/* Why Choose — Flagship Card Redesign */}
       <SectionWrapper id="why-zippay" className="!pt-8">
         <div ref={whyRef} className="fade-up">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex justify-center mb-16">
+            <span className="badge">The Advantage</span>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
             <div className="relative">
               <div className="absolute -inset-10 bg-primary-500/5 blur-[120px] rounded-full" />
-              <div className="glass-card !p-0 overflow-hidden !rounded-3xl shadow-2xl relative z-10 group min-h-[440px]">
-                <div className="bg-gradient-to-br from-primary-700 to-primary-900 p-10 text-white relative h-full flex flex-col justify-end">
-                  <div className="absolute top-10 right-10 opacity-20 group-hover:scale-110 group-hover:rotate-12 transition-all duration-1000 pointer-events-none">
-                    <Smartphone className="w-40 h-40" />
+              <div className="glass-card !p-0 overflow-hidden !rounded-3xl shadow-2xl relative z-10 group h-full">
+                <div className="bg-gradient-to-br from-primary-700 to-primary-900 p-12 text-white relative h-full flex flex-col justify-center items-center text-center">
+                  <div className="absolute top-1/2 -translate-y-1/2 right-10 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-1000 pointer-events-none">
+                    <Smartphone className="w-64 h-64" />
                   </div>
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center">
-                        <Zap className="w-6 h-6 text-white" fill="white" />
+                  <div className="relative z-10 w-full flex flex-col items-center">
+                    <div className="flex items-center gap-4 mb-8">
+                      <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center">
+                        <Zap className="w-7 h-7 text-white" fill="white" />
                       </div>
                       <span className="text-xl font-black tracking-widest uppercase">Zip App</span>
                     </div>
-                    <h3 className="text-3xl md:text-5xl font-black mb-6 leading-tight">
+                    <h3 className="text-white text-3xl md:text-4xl mb-6 font-black leading-tight">
                       Credit Management <br /> Simplified.
                     </h3>
-                    <p className="text-white/80 text-lg mb-8 max-w-sm leading-relaxed">
+                    <p className="text-white/80 text-base mb-10 max-w-sm leading-relaxed font-medium">
                       Track repayments, check eligibility, and get access to exclusive offers on our app.
                     </p>
-                    <div className="flex flex-wrap gap-3">
-                      <div className="h-12 px-8 rounded-xl bg-white text-black border border-white/20 flex items-center justify-center font-black text-[10px] tracking-widest hover:bg-black hover:text-white transition-all cursor-pointer shadow-lg outline-none">
+                    <div className="flex flex-wrap justify-center gap-4">
+                      <div className="h-14 px-10 rounded-2xl bg-white text-black border border-white/20 flex items-center justify-center font-black text-[11px] tracking-widest hover:bg-black hover:text-white transition-all cursor-pointer shadow-lg outline-none">
                         APP STORE
                       </div>
-                      <div className="h-12 px-8 rounded-xl bg-white text-black flex items-center justify-center font-black text-[10px] tracking-widest hover:bg-black hover:text-white transition-all cursor-pointer">
+                      <div className="h-14 px-10 rounded-2xl bg-white/10 backdrop-blur-md text-white flex items-center justify-center font-black text-[11px] tracking-widest hover:bg-white hover:text-black transition-all cursor-pointer border border-white/20">
                         PLAY STORE
                       </div>
                     </div>
@@ -426,19 +430,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col gap-0">
-              <SectionHeader
-                badge="The Advantage"
-                title={
-                  <>
-                    Why Choose <span className="gradient-text">Zippay?</span>
-                  </>
-                }
-                subtitle="Join thousands of digital-first users who prefer speed."
-                center={false}
-              />
+            <div className="flex flex-col justify-between py-1">
+              <div>
+                <h2 className="mb-3">Why Choose <span className="gradient-text">Zippay?</span></h2>
+                <p className="text-base text-text-secondary leading-relaxed font-medium mb-10">Join thousands of digital-first users who prefer speed.</p>
+              </div>
 
-              <div className="space-y-4">
+              <div className="flex-1 flex flex-col justify-between gap-4">
                 {[
                   {
                     t: "Digital-First",
@@ -459,16 +457,14 @@ export default function Home() {
                 ].map((item, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-5 p-4 rounded-2xl bg-white border border-slate-100/60 hover:border-primary-200 hover:shadow-xl transition-all duration-500 group/item"
+                    className="flex-1 glass-card !p-5 flex items-center gap-5 group/item hover:translate-x-2 transition-all duration-500 border border-slate-100/60"
                   >
                     <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 group-hover/item:bg-primary-600 transition-all duration-500">
                       <CheckCircle2 className="w-5 h-5 text-primary-600 group-hover/item:text-white" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-black text-primary-900 mb-0.5 leading-tight">
-                        {item.t}
-                      </h4>
-                      <p className="text-text-secondary leading-tight opacity-70 font-medium text-[11px]">
+                      <h4 className="text-primary-900 font-bold mb-1 text-lg leading-tight">{item.t}</h4>
+                      <p className="text-text-secondary leading-relaxed font-medium text-sm">
                         {item.d}
                       </p>
                     </div>
@@ -574,8 +570,8 @@ export default function Home() {
                 </div>
                 <span className="text-[10px] font-black text-sky-500 uppercase tracking-widest">On Track</span>
               </div>
-              <p className="text-lg font-black text-slate-900 mb-1">Dynamic Repayment</p>
-              <p className="text-[11px] font-medium text-text-secondary leading-snug mb-4">
+              <p className="text-base font-black text-slate-900 mb-1">Dynamic Repayment</p>
+              <p className="text-[10px] font-medium text-text-secondary leading-snug mb-4">
                 Adjust your repayment schedule to match your cash flow fluctuations.
               </p>
               <div className="grid grid-cols-6 gap-1">
@@ -629,11 +625,11 @@ export default function Home() {
           className="fade-up relative overflow-hidden rounded-2xl bg-primary-900 p-10 md:p-14 text-center text-white"
         >
           <div className="relative z-10 max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-[1.1] tracking-tight">
+            <h2 className="text-white mb-8">
               Need Instant Credit? <br />
               <span className="text-primary-300">Zippay Has You Covered.</span>
             </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
+            <p className="text-base text-white/70 mb-8 max-w-2xl mx-auto font-medium leading-relaxed">
               Experience the future of digital lending today.
               Simple, secure, and remarkably fast approval.
             </p>

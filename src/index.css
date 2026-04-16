@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
 @theme {
   --color-primary-50: #f8fafc;
@@ -8,7 +8,8 @@
   --color-primary-300: #cbd5e1;
   --color-primary-400: #94a3b8;
   --color-primary-500: #64748b;
-  --color-primary-600: #7c3aed; /* Keeping the purple accent */
+  --color-primary-600: #7c3aed;
+  /* Keeping the purple accent */
   --color-primary-700: #6d28d9;
   --color-primary-800: #5b21b6;
   --color-primary-900: #4c1d95;
@@ -27,15 +28,28 @@
 
 @layer base {
   * {
-    border-color: rgba(91, 33, 182, 0.06); /* Subtle purple border */
+    border-color: rgba(91, 33, 182, 0.06);
+    /* Subtle purple border */
   }
 
   body {
-    @apply bg-bg text-text-primary font-sans antialiased selection:bg-primary-600/10 selection:text-primary-600;
+    @apply bg-bg text-text-primary font-sans antialiased selection:bg-primary-600/10 selection:text-primary-600 text-[15px] leading-relaxed;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply tracking-tight;
+  h1, .h1 {
+    @apply text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-primary-900;
+  }
+
+  h2, .h2 {
+    @apply text-2xl md:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-primary-900;
+  }
+
+  h3, .h3 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-primary-900;
+  }
+
+  h4, .h4 {
+    @apply text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-primary-900;
   }
 }
 
@@ -57,21 +71,16 @@
 
   /* Premium Buttons */
   .btn-primary {
-    @apply relative px-8 py-3 rounded-xl bg-primary-600 text-white font-bold transition-all duration-300 
-           hover:bg-primary-700 hover:shadow-[0_20px_40px_rgba(124,58,237,0.25)] hover:-translate-y-1 
-           active:scale-95 active:translate-y-0 inline-flex justify-center items-center gap-2 overflow-hidden;
+    @apply relative px-8 py-3 rounded-xl bg-primary-600 text-white font-bold transition-all duration-300 hover:bg-primary-700 hover:shadow-[0_20px_40px_rgba(124,58,237,0.25)] hover:-translate-y-1 active:scale-95 active:translate-y-0 inline-flex justify-center items-center gap-2 overflow-hidden;
   }
 
   .btn-secondary {
-    @apply px-8 py-3 rounded-xl border-2 border-slate-200 bg-white text-slate-900 font-bold transition-all duration-300 
-           hover:bg-slate-50 hover:border-primary-200 hover:text-primary-700 hover:-translate-y-1 
-           active:scale-95 inline-flex justify-center items-center gap-2 shadow-sm shadow-black/5;
+    @apply px-8 py-3 rounded-xl border-2 border-slate-200 bg-white text-slate-900 font-bold transition-all duration-300 hover:bg-slate-50 hover:border-primary-200 hover:text-primary-700 hover:-translate-y-1 active:scale-95 inline-flex justify-center items-center gap-2 shadow-sm shadow-black/5;
   }
 }
 
 @utility glass-card {
-  @apply relative bg-white border border-slate-100/80 rounded-2xl p-6 transition-all duration-500 
-         hover:border-primary-500/30 hover:shadow-[0_40px_80px_rgba(15,23,42,0.1)] shadow-sm;
+  @apply relative bg-white border border-slate-100/80 rounded-2xl p-6 transition-all duration-500 hover:border-primary-500/30 hover:shadow-[0_40px_80px_rgba(15,23,42,0.1)] shadow-sm;
 }
 
 @layer components {
@@ -80,8 +89,7 @@
   }
 
   .badge {
-    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 
-           text-[10px] font-bold uppercase tracking-widest text-primary-600 mb-8 shadow-sm;
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 text-[10px] font-bold uppercase tracking-widest text-primary-600 mb-8 shadow-sm;
   }
 
   /* Animated Radio Navigation */
@@ -96,7 +104,7 @@
 
   .radio-nav-dot.active {
     @apply border-primary-500 scale-125;
-    box-shadow: 0 0 25px rgba(124,58,237,0.25);
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.25);
   }
 
   .radio-nav-dot.active::after {
@@ -105,9 +113,7 @@
 
   .radio-nav-dot::before {
     content: attr(data-label);
-    @apply absolute right-12 top-1/2 -translate-y-1/2 px-5 py-2.5 rounded-2xl bg-white border border-slate-100 
-           text-[10px] font-black uppercase tracking-widest text-text-secondary opacity-0 pointer-events-none 
-           transition-all duration-500 translate-x-6 whitespace-nowrap shadow-2xl shadow-primary-900/10;
+    @apply absolute right-12 top-1/2 -translate-y-1/2 px-5 py-2.5 rounded-2xl bg-white border border-slate-100 text-[10px] font-black uppercase tracking-widest text-text-secondary opacity-0 pointer-events-none transition-all duration-500 translate-x-6 whitespace-nowrap shadow-2xl shadow-primary-900/10;
   }
 
   .radio-nav-dot:hover {
@@ -124,8 +130,7 @@
   }
 
   .trust-icon-box {
-    @apply w-16 h-16 rounded-2xl bg-primary-50/50 flex items-center justify-center mb-6 transition-all duration-500 
-           group-hover:scale-110 group-hover:bg-primary-600/10 group-hover:rotate-6 shadow-sm;
+    @apply w-16 h-16 rounded-2xl bg-primary-50/50 flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-primary-600/10 group-hover:rotate-6 shadow-sm;
   }
 
   .fade-up {
@@ -151,21 +156,10 @@
   }
 
   .grid-overlay {
-    @apply absolute inset-0 opacity-[0.03] pointer-events-none;
+    @apply absolute inset-0 opacity-[0.02] pointer-events-none;
     background-image:
       radial-gradient(#0f172a 0.8px, transparent 0.8px);
     background-size: 32px 32px;
-  }
-
-  .fintech-bg {
-    @apply relative bg-white overflow-hidden;
-  }
-
-  .fintech-bg::before {
-    content: "";
-    @apply absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none;
-    background: radial-gradient(circle at 20% 30%, #7c3aed 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, #7c3aed 0%, transparent 40%);
   }
 
   /* Floating Marquee */
@@ -189,14 +183,12 @@
 
   /* Modern Inputs */
   .input-dark {
-    @apply w-full bg-white border border-slate-200 rounded-2xl px-5 py-4 text-slate-900 placeholder:text-slate-400 
-           transition-all duration-500 shadow-sm shadow-primary-900/5
-           focus:outline-none focus:border-primary-500 focus:bg-primary-50/30 focus:shadow-[0_15px_30px_rgba(124,58,237,0.1)];
+    @apply w-full bg-white border border-slate-200 rounded-2xl px-5 py-4 text-slate-900 placeholder:text-slate-400 transition-all duration-500 shadow-sm shadow-primary-900/5 focus:outline-none focus:border-primary-500 focus:bg-primary-50/30 focus:shadow-[0_15px_30px_rgba(124,58,237,0.1)];
   }
 
   /* Typography for Legal/Text Pages */
   .prose-light h2 {
-    @apply text-3xl font-black text-primary-900 mt-16 mb-8 border-b border-primary-100 pb-6 flex items-center gap-4 relative;
+    @apply text-2xl font-black text-primary-900 mt-16 mb-8 border-b border-primary-100 pb-6 flex items-center gap-4 relative;
   }
 
   .prose-light h2:first-child {
@@ -204,11 +196,11 @@
   }
 
   .prose-light h3 {
-    @apply text-xl font-extrabold text-primary-800 mt-10 mb-5 flex items-center gap-3;
+    @apply text-lg font-extrabold text-primary-800 mt-10 mb-5 flex items-center gap-3;
   }
 
   .prose-light p {
-    @apply text-lg text-text-secondary leading-relaxed mb-8;
+    @apply text-base text-text-secondary leading-relaxed mb-8;
   }
 
   .prose-light ul {
@@ -216,7 +208,7 @@
   }
 
   .prose-light li {
-    @apply text-lg text-text-secondary flex items-start gap-4 relative pl-8;
+    @apply text-base text-text-secondary flex items-start gap-4 relative pl-8;
   }
 
   .prose-light li::before {
@@ -234,20 +226,21 @@
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
+  0% {
+    transform: translateX(-100%);
+  }
 
-@keyframes connection-flow {
-  0% { width: 0; }
-  100% { width: 100%; }
-}
-
-.animate-connection {
-  animation: connection-flow 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  100% {
+    transform: translateX(100%);
+  }
 }

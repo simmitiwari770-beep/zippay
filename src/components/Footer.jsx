@@ -10,7 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="relative pt-24 pb-12 overflow-hidden bg-white">
+    <footer className="relative pt-24 pb-12 overflow-hidden bg-white border-t border-primary-100/50">
       {/* Premium Purple Tint Layers */}
       <div className="absolute inset-0 bg-primary-50/40 -z-10" />
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-primary-200/20 rounded-full blur-[100px] animate-pulse" />
@@ -29,7 +29,7 @@ export default function Footer() {
                 <span className="text-primary-600">PAY</span>
               </span>
             </Link>
-            <p className="text-text-secondary leading-relaxed font-medium text-lg">
+            <p className="text-text-secondary leading-relaxed font-medium text-base">
               Empowering India's digital future with instant, reliable, and transparent credit solutions.
             </p>
             <div className="flex gap-4">
@@ -74,6 +74,7 @@ export default function Footer() {
             <h4 className="text-primary-900 font-black text-xs uppercase tracking-[0.2em] mb-10">Legal</h4>
             <ul className="space-y-5">
               {[
+                { name: "Responsible Lending", path: "/responsible-lending" },
                 { name: "Privacy Policy", path: "/privacy" },
                 { name: "Terms & Conditions", path: "/terms" },
                 { name: "Disclaimer", path: "/disclaimer" },

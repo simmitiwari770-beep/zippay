@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-export default function CreditScoreVisual({ score = 780, maxScore = 900 }) {
+export default function CreditScoreVisual({ score = 782, maxScore = 900 }) {
   const [currentScore, setCurrentScore] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
@@ -131,10 +132,10 @@ export default function CreditScoreVisual({ score = 780, maxScore = 900 }) {
               <span className="text-base font-bold text-slate-900">&lt; 10 min</span>
             </div>
 
-            <button className="w-full mt-1 py-4 bg-slate-900 text-white rounded-2xl font-bold text-sm tracking-widest uppercase hover:bg-primary-600 hover:shadow-xl hover:shadow-primary-600/25 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 group/btn">
+            <Link to="/contact" className="w-full mt-1 py-4 bg-slate-900 text-white rounded-2xl font-bold text-xs tracking-wider uppercase hover:bg-primary-600 hover:shadow-xl hover:shadow-primary-600/25 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2 group/btn whitespace-nowrap">
               Unlock Full Credit
               <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -104,11 +104,11 @@ export default function Product() {
                 <Shield className="w-3.5 h-3.5" />
                 Regulated Digital Credit Product
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+              <h1 className="mb-6">
                 Zippay <br />
                 <span className="text-primary-600">Digital Credit</span>
               </h1>
-              <p className="text-lg text-text-secondary leading-relaxed mb-10 font-medium">
+              <p className="text-base text-text-secondary leading-relaxed mb-10 font-medium">
                 Zippay provides instant access to digital loan solutions designed for short-term financial needs.
               </p>
               <Link to="/contact" className="btn-primary">
@@ -126,7 +126,7 @@ export default function Product() {
                     <CreditCard className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-primary-900">Credit Overview</h3>
+                    <h3 className="text-lg">Credit Overview</h3>
                     <p className="text-xs text-primary-600 font-bold uppercase tracking-widest">Instant Approval</p>
                   </div>
                 </div>
@@ -192,13 +192,13 @@ export default function Product() {
             ].map((b, i) => (
               <div key={i} className="glass-card text-center group active:scale-95 transition-all">
                 <div className="relative z-10">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${b.accent} flex items-center justify-center mx-auto mb-8 shadow-xl shadow-primary-900/10 group-hover:scale-110 transition-all duration-500`}>
-                    <b.icon className="w-8 h-8 text-white" />
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${b.accent} flex items-center justify-center mx-auto mb-8 shadow-xl shadow-primary-900/10 group-hover:scale-110 transition-all duration-500`}>
+                    <b.icon className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-black text-primary-900 mb-3 tracking-tight">
+                  <h3 className="text-lg md:text-xl mb-3">
                     {b.title}
                   </h3>
-                  <p className="text-text-secondary text-base leading-relaxed">{b.desc}</p>
+                  <p className="text-text-secondary text-sm leading-relaxed font-medium">{b.desc}</p>
                 </div>
               </div>
             ))}
@@ -207,42 +207,48 @@ export default function Product() {
       </SectionWrapper>
 
       {/* Eligibility — High Contrast Section */}
-      <SectionWrapper gradient>
+      <SectionWrapper gradient className="!pt-8">
         <div ref={eligRef} className="fade-up">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div>
-              <SectionHeader
-                badge="Who Qualifies"
-                title={
-                  <>
-                    Simple Criteria for <span className="gradient-text">Instant Credit</span>
-                  </>
-                }
-                subtitle="We believe in financial inclusion. If you meet these criteria, you're ready to go."
-                center={false}
-              />
-              <div className="space-y-4">
+          {/* Centered Badge */}
+          <div className="flex justify-center mb-16">
+            <span className="badge">Who Qualifies?</span>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            <div className="flex flex-col justify-between py-1">
+              <div>
+                <h2 className="mb-4">
+                  Simple Criteria for <br />
+                  <span className="gradient-text">Instant Credit</span>
+                </h2>
+                <p className="text-base text-text-secondary leading-relaxed font-medium mb-12">
+                  We believe in financial inclusion. If you meet these criteria, you're ready to go.
+                </p>
+              </div>
+              
+              <div className="flex-1 flex flex-col justify-between gap-4">
                 {eligibilityCriteria.map((c, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-6 p-6 rounded-3xl bg-white/50 border border-primary-100/50 hover:bg-white transition-all duration-500"
+                    className="flex-1 flex items-center gap-6 p-6 rounded-3xl bg-white/50 border border-primary-100/50 hover:bg-white transition-all duration-500 shadow-sm"
                   >
                     <CheckCircle className="w-7 h-7 text-primary-600 shrink-0" />
-                    <p className="text-primary-900 font-bold text-lg">{c}</p>
+                    <p className="text-primary-900 font-bold text-base">{c}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="flex justify-center relative">
-              <div className="absolute -inset-20 bg-primary-500/10 blur-[150px] rounded-full" />
-              <div className="glass-card !p-12 relative z-10 shadow-2xl">
+
+            <div className="relative">
+              <div className="absolute -inset-20 bg-primary-500/5 blur-[150px] rounded-full" />
+              <div className="glass-card !p-12 relative z-10 shadow-2xl h-full flex flex-col justify-center">
                 <div className="text-center mb-10">
-                  <h3 className="text-xs font-black text-primary-600 uppercase tracking-[0.2em] mb-2">Real-time Check</h3>
-                  <p className="text-2xl font-black text-primary-900">Credit Health</p>
+                  <h3 className="text-sm font-black text-primary-600 uppercase tracking-[0.2em] mb-2">Real-time Check</h3>
+                  <p className="h2 !text-3xl md:!text-4xl">Credit Health</p>
                 </div>
-                <CreditScoreVisual score={750} />
+                <CreditScoreVisual score={782} />
                 <div className="mt-12 text-center">
-                  <Link to="/contact" className="btn-primary w-full justify-center !rounded-2xl">
+                  <Link to="/contact" className="btn-primary w-full justify-center !rounded-2xl py-4">
                     Check My Full Eligibility
                     <ArrowRight className="w-5 h-5" />
                   </Link>
@@ -268,14 +274,14 @@ export default function Product() {
           <div className="grid md:grid-cols-2 gap-8">
             {whoIsItFor.map((w, i) => (
               <div key={i} className="glass-card !p-8 flex gap-6 items-start group hover:bg-white transition-all duration-700">
-                <div className="w-14 h-14 rounded-2xl bg-primary-100 flex items-center justify-center shrink-0 border border-primary-200 group-hover:bg-primary-600 transition-all duration-700">
-                  <w.icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-all duration-700" />
+                <div className="w-12 h-12 rounded-2xl bg-primary-100 flex items-center justify-center shrink-0 border border-primary-200 group-hover:bg-primary-600 transition-all duration-700">
+                  <w.icon className="w-6 h-6 text-primary-600 group-hover:text-white transition-all duration-700" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-black text-primary-900 mb-2 tracking-tight">
+                  <h3 className="text-lg md:text-xl mb-2">
                     {w.title}
                   </h3>
-                  <p className="text-base text-text-secondary leading-relaxed font-medium">
+                  <p className="text-sm text-text-secondary leading-relaxed font-medium">
                     {w.desc}
                   </p>
                 </div>

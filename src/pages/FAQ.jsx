@@ -83,7 +83,7 @@ function FAQItem({ question, answer }) {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-start justify-between gap-4 py-8 text-left group transition-all"
       >
-        <span className="text-lg font-bold text-primary-900 group-hover:text-primary-600 transition-colors">
+        <span className="text-base font-bold text-primary-900 group-hover:text-primary-600 transition-colors">
           {question}
         </span>
         <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all ${isOpen ? "bg-primary-600 text-white rotate-180" : "bg-primary-50 text-primary-600"}`}>
@@ -91,7 +91,7 @@ function FAQItem({ question, answer }) {
         </div>
       </button>
       <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <p className="text-base text-text-secondary leading-relaxed pb-8 pr-12 font-medium">
+        <p className="text-sm text-text-secondary leading-relaxed font-medium pb-8 pr-12">
           {answer}
         </p>
       </div>
@@ -133,10 +133,10 @@ export default function FAQ() {
               <Sparkles className="w-3.5 h-3.5" />
               Support Center
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+            <h1 className="mb-6">
               Frequently Asked <span className="text-primary-600">Questions</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium mb-12">
+            <p className="text-base text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium mb-12">
               Find quick answers to everything you need to know about Zippay.
             </p>
 
@@ -204,10 +204,10 @@ export default function FAQ() {
       <section className="relative overflow-hidden py-24">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-primary-50/30 -z-10" />
         <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-black text-primary-900 mb-6">
+          <h2>
             Still Have <span className="text-primary-600">Questions?</span>
           </h2>
-          <p className="text-text-secondary mb-12 text-lg font-medium">
+          <p className="text-text-secondary mb-12 text-base font-medium">
             Our support team is available to help you with any queries.
           </p>
           <div className="flex justify-center">

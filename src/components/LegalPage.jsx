@@ -17,7 +17,7 @@ export default function LegalPage({ title, badge, lastUpdated, children }) {
               <Sparkles className="w-3.5 h-3.5" />
               {badge}
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+            <h1 className="mb-6">
               {title}
             </h1>
             {lastUpdated && (

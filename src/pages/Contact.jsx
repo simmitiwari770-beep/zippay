@@ -98,7 +98,7 @@ export default function Contact() {
               <MessageSquare className="w-4 h-4" />
               Institutional Support Desk
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+            <h1 className="mb-6">
               Need Help? <br />
               <span className="text-primary-600">We're Here.</span>
             </h1>
@@ -119,10 +119,10 @@ export default function Contact() {
               href={card.href}
               className="bg-white border border-slate-100 p-10 rounded-2xl flex flex-col items-center text-center group hover:border-primary-200 hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-16 h-16 rounded-xl bg-primary-50 flex items-center justify-center mb-8 group-hover:bg-primary-600 transition-all duration-300">
-                <card.icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-all duration-300" />
+              <div className="w-14 h-14 rounded-xl bg-primary-50 flex items-center justify-center mb-8 group-hover:bg-primary-600 transition-all duration-300">
+                <card.icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-all duration-300" />
               </div>
-              <h3 className="text-xl font-bold text-primary-900 mb-3">
+              <h3 className="text-lg font-bold mb-3">
                 {card.title}
               </h3>
               <p className="text-text-secondary mb-8 font-medium">{card.desc}</p>
@@ -152,7 +152,7 @@ export default function Contact() {
                 <div className="w-24 h-24 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-10">
                   <CheckCircle className="w-12 h-12 text-primary-600" />
                 </div>
-                <h3 className="text-4xl font-black text-primary-900 mb-6">
+                <h3 className="mb-6">
                   Inquiry Received.
                 </h3>
                 <p className="text-xl text-text-secondary mb-12 font-medium">

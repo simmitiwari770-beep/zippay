@@ -97,12 +97,12 @@ export default function HowItWorks() {
               <Sparkles className="w-4 h-4" />
               The Zippay Methodology
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+            <h1 className="mb-6">
               Simple. Fast. <br />
               <span className="text-primary-600">Digital.</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
-              We've engineered a frictionless journey that turns a few clicks 
+            <p className="text-base text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
+              We've engineered a frictionless journey that turns a few clicks
               into instant buying power. Here's exactly how it works.
             </p>
           </div>
@@ -116,8 +116,8 @@ export default function HowItWorks() {
               <div key={i} className="group relative flex items-stretch gap-8 md:gap-16">
                 {/* Visual Step Indicator Column */}
                 <div className="flex flex-col items-center shrink-0">
-                  <div className="w-14 h-14 md:w-20 md:h-20 rounded-3xl bg-white border-2 border-primary-50 flex items-center justify-center shadow-xl shadow-primary-900/5 group-hover:bg-primary-600 transition-all duration-500 relative z-20">
-                    <s.icon className="w-6 h-6 md:w-8 md:h-8 text-primary-600 group-hover:text-white transition-colors duration-500" />
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-3xl bg-white border-2 border-primary-50 flex items-center justify-center shadow-xl shadow-primary-900/5 group-hover:bg-primary-600 transition-all duration-500 relative z-20">
+                    <s.icon className="w-5 h-5 md:w-7 md:h-7 text-primary-600 group-hover:text-white transition-colors duration-500" />
                   </div>
                   {/* Vertical Progress Line */}
                   <div className="hidden md:block w-0.5 h-full bg-primary-50 group-last:hidden mt-2 relative overflow-hidden">
@@ -131,7 +131,7 @@ export default function HowItWorks() {
                   <div className="absolute -top-6 -right-6 text-[10rem] font-black text-primary-900/[0.02] pointer-events-none transition-all group-hover:text-primary-600/[0.04]">
                     {s.step}
                   </div>
-                  
+
                   <div className="relative z-10 grid md:grid-cols-5 gap-8 items-center">
                     <div className="md:col-span-3 space-y-6">
                       <div className="flex items-center gap-4">
@@ -139,10 +139,10 @@ export default function HowItWorks() {
                           Step {s.step}
                         </span>
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-black text-primary-900 tracking-tight">
+                      <h3 className="text-xl md:text-2xl tracking-tight">
                         {s.title}
                       </h3>
-                      <p className="text-base text-text-secondary leading-relaxed font-medium">
+                      <p className="text-sm text-text-secondary leading-relaxed font-medium">
                         {s.desc}
                       </p>
                     </div>
@@ -184,13 +184,13 @@ export default function HowItWorks() {
           <div className="grid md:grid-cols-3 gap-8">
             {afterSteps.map((s, i) => (
               <div key={i} className="glass-card !p-8 text-center group hover:scale-[1.05] transition-all duration-700">
-                <div className="w-16 h-16 rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center mx-auto mb-8 group-hover:bg-primary-600 transition-all duration-700">
-                  <s.icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-all duration-700" />
+                <div className="w-14 h-14 rounded-2xl bg-primary-50 border border-primary-100 flex items-center justify-center mx-auto mb-8 group-hover:bg-primary-600 transition-all duration-700">
+                  <s.icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-all duration-700" />
                 </div>
-                <h3 className="text-xl font-black text-primary-900 mb-4 tracking-tight">
+                <h3 className="text-lg md:text-xl mb-4 tracking-tight">
                   {s.title}
                 </h3>
-                <p className="text-base text-text-secondary leading-relaxed font-medium">
+                <p className="text-sm text-text-secondary leading-relaxed font-medium">
                   {s.desc}
                 </p>
               </div>
@@ -206,14 +206,14 @@ export default function HowItWorks() {
           className="fade-up relative overflow-hidden rounded-[40px] bg-gradient-to-br from-primary-600 to-primary-900 p-12 md:p-20 text-center text-white"
         >
           <div className="hero-glow !bg-white/5" />
-          
+
           <div className="max-w-4xl mx-auto relative z-10">
-            <h2 className="text-3xl md:text-5xl font-black mb-8 leading-[1.1] tracking-tighter">
+            <h2 className="mb-8 tracking-tighter !text-white">
               Start Your Journey <br />
-              <span className="text-primary-300">In Under 10 Minutes.</span>
+              In Under 10 Minutes.
             </h2>
-            <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-              Don't wait for banks. Join Zippay and experience the 
+            <p className="text-base text-white/80 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+              Don't wait for banks. Join Zippay and experience the
               power of truly instant digital credit today.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center">

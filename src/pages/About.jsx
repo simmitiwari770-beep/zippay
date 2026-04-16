@@ -83,12 +83,12 @@ export default function About() {
               <Sparkles className="w-3.5 h-3.5" />
               Our Story
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+            <h1>
               About <span className="text-primary-600">Zippay</span>
             </h1>
-            <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
-              Zippay is a modern digital lending platform focused on making short-term credit accessible, fast, and transparent. 
-              Built with a user-first approach, Zippay removes the complexity traditionally associated with loans and replaces it 
+            <p className="text-base text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
+              Zippay is a modern digital lending platform focused on making short-term credit accessible, fast, and transparent.
+              Built with a user-first approach, Zippay removes the complexity traditionally associated with loans and replaces it
               with speed, simplicity, and trust.
             </p>
           </div>
@@ -122,11 +122,11 @@ export default function About() {
               <div key={i} className="glass-card card-lift !p-8 text-center h-full">
                 <div className="relative z-10">
                   <div
-                    className={`w-14 h-14 rounded-xl bg-gradient-to-br ${item.accent} flex items-center justify-center mx-auto mb-5 shadow-lg shadow-black/5`}
+                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.accent} flex items-center justify-center mx-auto mb-5 shadow-lg shadow-black/5`}
                   >
-                    <item.icon className="w-7 h-7 text-white" />
+                    <item.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-3">
+                  <h3 className="text-lg md:text-xl">
                     {item.title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -159,7 +159,7 @@ export default function About() {
                     <v.icon className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-slate-900 mb-2">
+                    <h3 className="text-lg md:text-xl mb-2">
                       {v.title}
                     </h3>
                     <p className="text-sm text-text-secondary leading-relaxed">
@@ -192,9 +192,8 @@ export default function About() {
             {milestones.map((m, i) => (
               <div
                 key={i}
-                className={`relative flex items-start gap-6 mb-10 last:mb-0 ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                className={`relative flex items-start gap-6 mb-10 last:mb-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
               >
                 {/* Dot */}
                 <div className="absolute left-6 md:left-1/2 -translate-x-1/2 mt-2 z-10">
@@ -207,7 +206,7 @@ export default function About() {
                   <span className="badge !text-[10px] mb-2 inline-flex">
                     {m.year}
                   </span>
-                  <h3 className="text-base font-bold text-slate-900 mb-1">
+                  <h3>
                     {m.title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -221,7 +220,10 @@ export default function About() {
       </SectionWrapper>
 
       {/* Stats Banner */}
-      <div className="border-y border-black/[0.04]">
+      <div className="border-y border-primary-600/10 bg-primary-600/[0.03] relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/[0.05] via-transparent to-primary-600/[0.05]" />
+        <div className="absolute -left-[10%] top-0 w-1/3 h-full bg-primary-600/[0.05] blur-[100px] rounded-full" />
+        <div className="absolute -right-[10%] bottom-0 w-1/3 h-full bg-primary-600/[0.05] blur-[100px] rounded-full" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -234,7 +236,7 @@ export default function About() {
                 <p className="text-3xl md:text-4xl font-black gradient-text mb-1">
                   {stat.value}
                 </p>
-                <p className="text-sm text-text-muted font-medium">
+                <p className="text-[10px] uppercase tracking-widest text-text-muted font-bold">
                   {stat.label}
                 </p>
               </div>
@@ -242,6 +244,7 @@ export default function About() {
           </div>
         </div>
       </div>
+
     </main>
   );
 }

@@ -74,7 +74,7 @@ export default function ResponsibleLending() {
               <Sparkles className="w-3.5 h-3.5" />
               Responsible Lending
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-primary-900">
+            <h1 className="mb-6">
               Responsible Credit, <span className="text-primary-600">Built-In</span>
             </h1>
             <p className="text-lg text-text-secondary max-w-2xl mx-auto leading-relaxed font-medium">
@@ -103,7 +103,7 @@ export default function ResponsibleLending() {
                   <div className="w-12 h-12 rounded-xl bg-primary-600/15 border border-primary-500/20 flex items-center justify-center mb-5">
                     <p.icon className="w-6 h-6 text-primary-400" />
                   </div>
-                  <h3 className="text-base font-bold text-text-primary mb-2">
+                  <h3 className="text-lg font-bold mb-2">
                     {p.title}
                   </h3>
                   <p className="text-sm text-text-secondary leading-relaxed">
@@ -172,16 +172,16 @@ export default function ResponsibleLending() {
           <div className="w-14 h-14 rounded-xl bg-primary-600/15 border border-primary-100 flex items-center justify-center mx-auto mb-6">
             <Users className="w-7 h-7 text-primary-600" />
           </div>
-          <h2 className="text-3xl font-black text-primary-900 mb-4">
+          <h2 className="mb-4">
             User Responsibility
           </h2>
-          <p className="text-text-secondary text-lg leading-relaxed mb-8 font-medium">
+          <p className="text-text-secondary text-base leading-relaxed mb-8 font-medium">
             Users are encouraged to borrow responsibly and ensure timely repayment 
             to maintain a healthy credit profile.
           </p>
-          <a href="/contact" className="btn-primary">
+          <Link to="/contact" className="btn-primary">
             Speak to a Support Advisor
-          </a>
+          </Link>
         </div>
       </SectionWrapper>
     </main>
