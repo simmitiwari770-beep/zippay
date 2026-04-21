@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   Shield,
   Heart,
@@ -136,10 +137,10 @@ export default function ResponsibleLending() {
               {commitments.map((c, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 p-4 rounded-2xl bg-white/[0.02] border border-white/[0.04] hover:border-white/[0.08] transition-all"
+                  className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-primary-100 hover:border-primary-200 transition-all shadow-sm"
                 >
-                  <CheckCircle className="w-5 h-5 text-accent mt-0.5 shrink-0" />
-                  <p className="text-text-primary font-medium text-sm">{c}</p>
+                  <CheckCircle className="w-5 h-5 text-primary-600 mt-0.5 shrink-0" />
+                  <p className="text-text-secondary font-medium text-sm">{c}</p>
                 </div>
               ))}
             </div>
@@ -148,16 +149,16 @@ export default function ResponsibleLending() {
       </SectionWrapper>
 
       {/* Alert Banner */}
-      <div className="border-y border-amber-500/10">
+      <div className="border-y border-amber-500/20 bg-amber-50">
         <div className="max-w-4xl mx-auto px-4 py-8 flex items-start gap-4">
-          <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
-            <AlertTriangle className="w-5 h-5 text-amber-400" />
+          <div className="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center shrink-0">
+            <AlertTriangle className="w-5 h-5 text-amber-600" />
           </div>
           <div>
-            <h3 className="font-bold text-amber-300 mb-1 text-sm">
+            <h3 className="font-bold text-amber-700 mb-1 text-sm">
               Important Notice
             </h3>
-            <p className="text-sm text-amber-200/70 leading-relaxed">
+            <p className="text-sm text-amber-700/80 leading-relaxed">
               Zippay never asks for any upfront payment or deposit before loan
               disbursal. If anyone contacts you claiming to represent Zippay and
               asks for money, please report it immediately.

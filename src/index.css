@@ -223,6 +223,15 @@
   .step-number {
     @apply text-9xl font-black text-primary-900/[0.02] absolute -top-8 -right-8 transition-colors group-hover:text-primary-600/[0.04] pointer-events-none;
   }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
 }
 
 @keyframes marquee {

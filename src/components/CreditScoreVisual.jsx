@@ -58,14 +58,14 @@ export default function CreditScoreVisual({ score = 782, maxScore = 900 }) {
 
       <div className="relative z-10">
         {/* Header Row */}
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
             <div className="w-11 h-11 rounded-[14px] bg-green-50 flex items-center justify-center border border-green-100">
               <CheckCircle2 className="w-5 h-5 text-green-500" />
             </div>
             <div>
               <h4 className="text-base font-bold text-slate-900 tracking-tight leading-tight">Zippay Limit</h4>
-              <div className="flex items-center gap-1.5 mt-0.5">
+              <div className="flex items-center justify-center sm:justify-start gap-1.5 mt-0.5">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                 <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Live Analysis</p>
               </div>
@@ -73,7 +73,7 @@ export default function CreditScoreVisual({ score = 782, maxScore = 900 }) {
           </div>
 
           {/* Status Pill */}
-          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100">
+          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-50 border border-slate-100 w-fit mx-auto sm:mx-0">
             <div
               className="w-2 h-2 rounded-full"
               style={{ backgroundColor: getColor(currentScore), boxShadow: `0 0 8px ${getColor(currentScore)}` }}
@@ -84,8 +84,8 @@ export default function CreditScoreVisual({ score = 782, maxScore = 900 }) {
           </div>
         </div>
 
-        {/* Main Content — Horizontal Layout */}
-        <div className="flex items-center gap-8">
+        {/* Main Content — Responsive Layout */}
+        <div className="flex flex-col md:flex-row items-center gap-8 w-full">
           {/* Left — Circular Gauge */}
           <div className="relative shrink-0 w-44 h-44">
             <div

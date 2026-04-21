@@ -111,8 +111,8 @@ export default function Home() {
         >
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Left Content */}
-            <div className="max-w-2xl">
-              <span className="badge">
+            <div className="max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
+              <span className="badge mx-auto lg:mx-0">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 RBI Regulated • ISO 27001 Certified
               </span>
@@ -120,22 +120,22 @@ export default function Home() {
                 Instant Digital Loans. <br />
                 <span className="text-primary-600">Anytime. Anywhere.</span>
               </h1>
-              <p className="text-base md:text-lg text-text-secondary max-w-xl leading-relaxed mb-12 font-medium">
+              <p className="text-base md:text-lg text-text-secondary max-w-xl leading-relaxed mb-12 font-medium mx-auto lg:mx-0">
                 Get quick access to short-term digital credit with a simple, paperless, and fully online experience.
                 No long queues. No confusion. Just fast approvals.
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 items-start sm:items-center mb-8">
-                <Link to="/contact" className="btn-primary">
+              <div className="flex flex-col sm:flex-row gap-5 items-center lg:items-start mb-12 justify-center lg:justify-start">
+                <Link to="/contact" className="btn-primary w-full sm:w-auto justify-center">
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </Link>
-                <Link to="/product" className="px-8 py-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 hover:bg-white transition-all">
+                <Link to="/product" className="px-8 py-4 rounded-xl bg-slate-50 border border-slate-200 font-bold text-slate-700 hover:bg-white transition-all w-full sm:w-auto text-center">
                   Check Eligibility
                 </Link>
               </div>
 
               {/* Trust Indicators below CTA — Ultra-sleek variant */}
-              <div className="flex flex-wrap gap-x-6 gap-y-3 items-center">
+              <div className="flex flex-wrap gap-x-6 gap-y-4 items-center justify-center lg:justify-start">
                 {[
                   "RBI Compliant",
                   "256-bit Encryption",
