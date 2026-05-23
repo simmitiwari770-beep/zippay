@@ -17,4 +17,4 @@ export default function SectionWrapper({
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-12">{children}</div>
     </section>
   );
-}
+};
